@@ -1,0 +1,424 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Struts2-EJB3-Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="Struts2-EJB3-Plugin">Struts2-EJB3-Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Struts2-EJB3-Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14812256">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14812256">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14812256">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14812256">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14812256">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14812256">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+        #editReport()
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <DIV class="table-wrap">
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh">Name         </TH>
+<TD class="confluenceTd"> Struts2-EJB3-Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Publisher    </TH>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">License      </TH>
+<TD class="confluenceTd"> Open Source (ASL2)  </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Version      </TH>
+<TD class="confluenceTd"> 0.0.5 </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Homepage     </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2-ejb3-plugin/" class="external-link" rel="nofollow">http://code.google.com/p/struts2-ejb3-plugin/</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Download     </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2-ejb3-plugin/downloads/list" class="external-link" rel="nofollow">http://code.google.com/p/struts2-ejb3-plugin/downloads/list</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Source       </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2-ejb3-plugin/source/checkout" class="external-link" rel="nofollow">http://code.google.com/p/struts2-ejb3-plugin/source/checkout</A></TD>
+</TR>
+</TBODY></TABLE>
+</DIV>
+
+
+<P><STYLE type="text/css">
+    /*             styles for the star rater                */
+    .star-rating{
+        list-style:none;
+        margin: 0px;
+        padding:0px;
+        width: 100px;
+        height: 20px;
+        position: relative;
+        background: url(http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/star_rating.gif) top left repeat-x;
+    }
+    .star-rating li{
+        padding:0px;
+        margin:0px;
+        /*\*/
+        float: left;
+        /* */
+    }
+    .star-rating li a{
+        display:block;
+        width:20px;
+        height: 20px;
+        text-decoration: none;
+        text-indent: -9000px;
+        z-index: 20;
+        position: absolute;
+        padding: 0px;
+    }
+    .star-rating li a:hover{
+        background: url(http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/star_rating.gif) left bottom;
+        z-index: 1;
+        left: 0px;
+    }
+    .star-rating a.one-star{
+        left: 0px;
+    }
+    .star-rating a.one-star:hover{
+        width:20px;
+    }
+    .star-rating a.two-stars{
+        left:20px;
+    }
+    .star-rating a.two-stars:hover{
+        width: 40px;
+    }
+    .star-rating a.three-stars:hover{
+        width: 60px;
+    }
+    .star-rating a.three-stars{
+        left: 40px;
+    }
+    .star-rating a.four-stars{
+        left: 60px;
+    }
+    .star-rating a.four-stars:hover{
+        width: 80px;
+    }
+    .star-rating a.five-stars{
+        left: 80px;
+    }
+    .star-rating a.five-stars:hover{
+        width: 100px;
+    }
+</STYLE>
+<SCRIPT type="text/javascript">
+    document.Rate = {
+        rateURL: "/confluence/plugins/rate/rating.action?contentId=14812256",
+        clearURL: "/confluence/plugins/rate/clear.action?contentId=14812256",
+        backURL: "/confluence/plugins/rate/back.action?contentId=14812256",
+        unrateURL: "/confluence/plugins/rate/undo.action?contentId=14812256",
+        rateKey: false, comms: [], req: false,
+        doAJAX: function (url,rateKey) {
+            var commsObj = false;
+            // Build the AJAX object
+            if (window.XMLHttpRequest) {
+                commsObj = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                commsObj = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            // Check it worked
+            if (!commsObj) return false;
+            // Store the AJAX object
+            var idx = document.Rate.comms.length;
+            document.Rate.comms[idx] = commsObj;
+            // Setup the object
+            commsObj.open("GET", url, true);
+            eval("commsObj.onreadystatechange = function () { "+
+                 "if (document.Rate.comms["+ idx +"].readyState == 4) { "+
+                 "if (document.Rate.comms["+ idx +"].status == 200) { "+
+                 "document.getElementById('rate"+ rateKey +"').innerHTML = document.Rate.comms["+ idx +"].responseText; "+
+                 "document.Rate.comms["+ idx +"] = false; "+
+                 "} "+
+                 "} "+
+                 "} "
+            );
+            commsObj.send(null);
+            return true;
+        },
+        doAction: function (rateKey, url, rating) {
+            // set the cookie
+            if (rating > 0) {
+                var today = new Date();
+                var expire = new Date();
+                expire.setTime(today.getTime() + 3600000*24*7*52);
+                var cookieStr = document.getElementById("rate"+ rateKey +".cookieName").innerHTML +"="+
+                                rating +";expires="+expire.toGMTString();
+                document.cookie = cookieStr;
+            } else if (rating < 0) {
+                var cookieStr = document.getElementById("rate"+ rateKey +".cookieName").innerHTML +"="+
+                                ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+                document.cookie = cookieStr;
+            }
+            // Cycle through and clear out dead requests
+            var result = document.Rate.doAJAX(url, rateKey);
+            if (!result) {
+                alert("There was a problem with executing your request.");
+                return false;
+            }
+        }
+    };
+</SCRIPT>
+<DIV id="rateMyPlugin">
+<DIV style="visibility:hidden; display:none;" id="rateMyPlugin.cookieName">rate-14812256-93312</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('MyPlugin',document.Rate.rateURL+'&rateDir=dynamic&rateKey=MyPlugin&rateTitle=Rating&rating=0',false)" title="Display Results (2)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<H2><A name="Struts2-EJB3-Plugin-Overview"></A>Overview</H2>
+
+<P>该plugin提供struts的Action及Interceptor对EJB组件及Resource的无侵入式依赖注入(DI)。实现Struts2与EJB3的整合。</P>
+
+<H2><A name="Struts2-EJB3-Plugin-Usage"></A>Usage</H2>
+
+<P>Please read this short info here : <A href="http://code.google.com/p/struts2-ejb3-plugin/" class="external-link" rel="nofollow">http://code.google.com/p/struts2-ejb3-plugin/</A></P>
+
+<H2><A name="Struts2-EJB3-Plugin-Example"></A>Example</H2>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<PRE class="code-java">
+
+@Interceptors(Interceptor3.class)
+<SPAN class="code-keyword">public</SPAN> class EjbTestAction1 <SPAN class="code-keyword">extends</SPAN> ActionSupport{
+
+	<SPAN class="code-keyword">private</SPAN> <SPAN class="code-keyword">static</SPAN> <SPAN class="code-keyword">final</SPAN> <SPAN class="code-object">long</SPAN> serialVersionUID = 4126146938063764047L;
+
+	@EJB
+	<SPAN class="code-keyword">private</SPAN> TestSessionBean1Local testSessionBean1Local;
+	
+	@EJB(name=<SPAN class="code-quote">&quot;ejb/sessionBean1&quot;</SPAN>)
+	<SPAN class="code-keyword">private</SPAN> TestSessionBean1Remote sessionBean1;
+	
+	<SPAN class="code-keyword">private</SPAN> TestSessionBean1Remote session;
+	
+	@EJB
+	<SPAN class="code-keyword">public</SPAN> void setSession(TestSessionBean1Remote session) {
+		<SPAN class="code-keyword">this</SPAN>.session = session;
+	}
+
+	@PostConstruct
+	@Interceptors({Interceptor2.class,Interceptor3.class})
+	<SPAN class="code-keyword">public</SPAN> void init(){
+		<SPAN class="code-comment">//...
+</SPAN>	}
+	
+	@Interceptors({Interceptor3.class,Interceptor1.class,Interceptor2.class})
+	<SPAN class="code-keyword">public</SPAN> <SPAN class="code-object">String</SPAN> execute() <SPAN class="code-keyword">throws</SPAN> Exception {
+		<SPAN class="code-comment">//...
+</SPAN>		<SPAN class="code-keyword">return</SPAN> SUCCESS;
+	}
+}
+</PRE>
+</DIV></DIV>
+
+<P>在Interceptor中使用方式和在Action中的使用方式相同。 </P>
+
+<P>需要注意的是，在Action的execute(或者自定义的名称)方法中同时使用struts2的Interceptor和@Interceptors 时，@Interceptors会在Interceptor之前开始，在Interceptor之后结束。 </P>
+
+<H2><A name="Struts2-EJB3-Plugin-Installation"></A>Installation</H2>
+
+<P> 将 struts2-ejb3-plugin.jar 考入 /WEB-INF/lib 目录中。这时使用的为plugin的默认配置，该配置为 cn/agrael/struts/plugin/ejb3/default-struts-ejb3-plugin.properties中的配置。配置信息如下：</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<PRE class="code-java">
+#ENC的默认名
+ENCPath=java:comp/env/
+#应用服务器的具体实现类，该类是 cn.agrael.struts.plugin.ejb3.ApplicationServer的实现类
+ejbContainer=cn.agrael.struts.plugin.ejb3.JbossApplicationServer
+#是否解析@Resource的标志 <SPAN class="code-keyword">true</SPAN> 为解析，<SPAN class="code-keyword">false</SPAN> 为不解析
+isParseResource=<SPAN class="code-keyword">false</SPAN>
+#是否解析@EJB的标志 <SPAN class="code-keyword">true</SPAN> 为解析，<SPAN class="code-keyword">false</SPAN> 为不解析
+isParseEJB=<SPAN class="code-keyword">true</SPAN>
+#ear的路径名，如果没有则为空字符串
+earFileBaseName=
+#为远程Bean时的JNDI路径
+remote=remote
+#为本地Bean时的JNDI路径
+local=local
+</PRE>
+</DIV></DIV>
+
+<P>如果要修改默认的配置，需要在 classpath 下建立为 struts-ejb3-plugin.properties 的资源文件覆盖默认的配置。</P>
+
+<P>除了plugin本身的配置以外，还需要在 classpath 下创建名为 jndi.properties 的资源文件用做 jndi配置 ，plugin 中使用到的jndi查找依赖于该配置。 </P>
+
+
+<P>目前的版本暂时不支持@PreDestroy。 现阶段只有 jboss与glassfish2.x 应用服务器的实现，在以后的版本中会陆续增加如 weblogic 等应用服务器的实现。如果现在需要 jboss与glassfish2.x之外的实现，可实现 cn.agrael.struts.plugin.ejb3.ApplicationServer  接口或者继承cn.agrael.struts.plugin.ejb3.AbstractApplicationServer类，并使用 struts-ejb3-plugin.properties 修改 ejbContainer 为实现类。 </P>
+
+<H2><A name="Struts2-EJB3-Plugin-Resources"></A>Resources </H2>
+
+<UL>
+	<LI><A href="http://code.google.com/p/struts2-ejb3-plugin/" class="external-link" rel="nofollow">http://code.google.com/p/struts2-ejb3-plugin/</A></LI>
+</UL>
+
+
+
+<H2><A name="Struts2-EJB3-Plugin-VersionHistory"></A>Version History</H2>
+
+<DIV class="table-wrap">
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.0.1 </TD>
+<TD class="confluenceTd"> Mar 9, 2010 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.0.2 </TD>
+<TD class="confluenceTd"> Mar 23, 2010 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+<TD class="confluenceTd"> 修改jar文件名为struts2-ejb3-plugin.jar，字段支持继承注解，Jboss实现的@Resource的查找在代码中补上（前一个版本有实现，但是没调用），Context现在为即时释放(close)</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.0.3 </TD>
+<TD class="confluenceTd"> Mar 30, 2010 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+<TD class="confluenceTd"> 增加了glassfish2.x应用服务器的实现，重写了cn.agrael.struts.plugin.ejb3.JbossApplicationServer并增加一个抽象类cn.agrael.struts.plugin.ejb3.AbstractApplicationServer作为实现模版。改变对EJB注解与Resource注解的资源的查找的方式-如果当前级别属性没有找到会向更高级的属性找，而不是像0.0.2版本及之前的只在指定的最低级属性找。 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.0.4 </TD>
+<TD class="confluenceTd"> May 10, 2010 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+<TD class="confluenceTd"> 修改了cn.agrael.util.ObjectUtils中对Class的引用为弱引用。修改了几个对象引用范围，将引用范围变小。 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.0.5 </TD>
+<TD class="confluenceTd"> May 30, 2010 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael" class="confluence-userlink username:agrael">Agrael Lee</A> </TD>
+<TD class="confluenceTd"> 修改了plugin 内部使用的类的命名规则以及单词拼写错误。 </TD>
+</TR>
+</TBODY></TABLE>
+</DIV>
+
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 3.2 Build: 1810 Mar 16, 2010)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0-dkulp)
+    </DIV>
+  </BODY>
+</HTML>

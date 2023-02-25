@@ -1,0 +1,172 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Model Repository</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="scope-plugin.html" title="Scope Plugin">Scope Plugin</A>&nbsp;&gt;&nbsp;<A href="" title="Model Repository">Model Repository</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Model Repository</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=71422">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=71422">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=71422">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=71422">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=71422">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=71422">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=schneidh@gmail.com">Tom Schneider</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=schneidh@gmail.com">Tom Schneider</A> on Nov 21, 2007
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=71422&originalId=71428">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <H3><A name="ModelRepository-Purpose"></A>Purpose</H3>
+<P>The purpose of the model repository is to save off the model between an edit and save action.  Often times this is need when using detached objects with JPA or Hibernate.  This is also needed in instances where optimistic locking is used.</P>
+
+<H3><A name="ModelRepository-UseCase"></A>Use Case</H3>
+<P>The model repository is designed to be used for the typical edit/save use case that many web applications must handle.  The use case begins with the user choosing to edit an object in the system.  The system loads the given object from the database and displays the object for the user to edit.  At the same time, the object should be stored in the session so it can be retrieved later.  Once the user is finished editing the object, the user clicks the <EM>save</EM> button and the page is submited back to the application.  At this point, the object is restored from the session and the new values are applied to the newly restored object.  Then the object is persisted to the database, so the new values are not lost.</P>
+
+<H3><A name="ModelRepository-Implementation"></A>Implementation</H3>
+
+<P>This functionality can be implemented very easily with the scope plugin.  The first step is to define a place to store the model in the session.  This key is used for all actions.  Any previous value is overwritten with the new value for the current action.  This ensures that the session is not filled of with random values from each action.</P>
+
+<P>Here is the interface that hold our global session key for all action models:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+/**
+ * The location in the session where the domain model is stored between an edit
+ * and a save.
+ */
+public interface ModelRepo {
+	/**
+	 * The session key where domain model is stored.
+	 */
+	public static String DOMAIN_MODEL = "DOMAIN_MODEL";
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>Now simply annotate your domain model with an <EM>@In</EM> and <EM>@Out</EM> session annotation using the string constant from above as the session key:</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+public class ExampleAction extends ActionSupport {
+
+	@In(scope = ScopeType.SESSION, value = ModelRepo.DOMAIN_MODEL)
+	@Out(scope = ScopeType.SESSION, value = ModelRepo.DOMAIN_MODEL)
+	private ExampleBean exampleBean;
+
+	...
+
+	public String edit() {
+		...
+		return SUCCESS;
+	}
+
+	public String save() {
+		...
+		return SUCCESS;
+	}
+}
+]]></SCRIPT>
+</DIV></DIV>
+<P>That's all.  After the edit, the domain model will be stored in the session.  On the save, the model will be restored before the new values are applied.</P>
+
+<H3><A name="ModelRepository-ModelRepositoryvs.paramsprepareparams"></A>Model Repository vs. params-prepare-params</H3>
+<P>An alternative to the model repository is to use the params-prepare-params interceptor stack.  The params-prepare-params interceptor stack requires the object you are editing to be re-read from the database.  In cases where optimistic locking is used, this completely circumvents the version field.  In these cases, the originally read object should be used when saving the object.</P>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

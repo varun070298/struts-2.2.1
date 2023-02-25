@@ -1,0 +1,236 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Struts2 JCR Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="Struts2 JCR Plugin">Struts2 JCR Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Struts2 JCR Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14814356">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14814356">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14814356">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14814356">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14814356">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14814356">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=mskripnikov">Max Skripnikov</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=mskripnikov">Max Skripnikov</A> on Apr 01, 2010
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=14814356&originalId=14814639">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TD class="confluenceTd"> Name &nbsp;&nbsp;&nbsp;&nbsp; <BR clear="all"> </TD>
+<TD class="confluenceTd"> JCR Plugin </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Publisher </TD>
+<TD class="confluenceTd"> Max Skripnikov (<A href="http://code.google.com/p/sibutu/" rel="nofollow">sibutu</A> project) <BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> License &nbsp;&nbsp;&nbsp; </TD>
+<TD class="confluenceTd"> Open Source </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Version &nbsp;&nbsp;&nbsp; </TD>
+<TD class="confluenceTd"> 1.0 <BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Compatibility &nbsp;&nbsp;&nbsp; </TD>
+<TD class="confluenceTd"> Struts 2.0 + </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Homepage &nbsp;&nbsp;&nbsp; </TD>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2-jcr-plugin/" rel="nofollow">http://code.google.com/p/struts2-jcr-plugin/</A> </TD>
+</TR>
+</TBODY></TABLE>
+
+<H1><A name="Struts2JCRPlugin-Overview"></A>Overview</H1>
+
+<P>Plugin for the struts2 to provide transparent JCR(JSR-170) integration. Plugin consists of two parts - annotation based interceptor for preloading JCR nodes, and wrapper classes for transparent wrapping of JCR Nodes so they implement both javax,jcr.Node and java.util.Map. This approach allows node's properties to be set directly by Struts2, also validation can easily be done and JCR node's properties can be referenced in JSP pages in a standard way.</P>
+
+<H1><A name="Struts2JCRPlugin-Features"></A>Features</H1>
+
+<P>&nbsp;&nbsp;&nbsp; * Easy access to jcr node's properties on jsp pages<BR>
+&nbsp;&nbsp;&nbsp; * Preloading nodes using annotation</P>
+
+<H1><A name="Struts2JCRPlugin-Installation"></A>Installation</H1>
+
+<P>&nbsp;&#42; Download the Plugin and put in into your WEB-INF/lib folder.<BR>
+&nbsp;&#42; Configure the interceptors stack to include JCR interceptor</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;interceptor name="jcrActionsInterceptor" class="org.sibutu.plugin.struts2.jcr.interceptor.JcrActionsInterceptor" /&gt;
+ &lt;interceptor-stack name="myStack"&gt;
+ ...
+ &lt;interceptor-ref name="jcrAction" /&gt;
+ &lt;interceptor-ref name="staticParams" /&gt;
+ &lt;interceptor-ref name="params"&gt;
+ &lt;param name="excludeParams"&gt;dojo\..*&lt;/param&gt;
+ &lt;param name="ordered"&gt;true&lt;/param&gt;
+ &lt;/interceptor-ref&gt;
+ ...
+ &lt;/interceptor-stack&gt;]]></SCRIPT>
+</DIV></DIV>
+<P>&nbsp;&nbsp;&nbsp;</P>
+
+<P>&#42; Add lines to spring config describing JcrTemplateWrapper</P>
+
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;bean id="wrapperFactory" class="org.sibutu.plugin.struts2.jcr.wrapper.SimpleNodeWrapperFactory"/&gt;
+&lt;bean id="jcrTemplate" class="org.sibutu.plugin.struts2.jcr.wrapper.JcrTemplateWrapper"&gt;
+  &lt;property name="sessionFactory" ref="jcrSessionFactory"/&gt;
+  &lt;property name="wrapperFactory" ref="wrapperFactory"/&gt;
+  &lt;property name="allowCreate" value="true"/&gt;
+&lt;/bean&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+
+<H1><A name="Struts2JCRPlugin-Example"></A>Example</H1>
+
+<P>&nbsp;&nbsp; The following example demonstrates plugin usage advantages. There is struts action AddressAction which is used to edit address. Address is a JCR node, having property addressId which is unique for each address node and serves as identifier.<BR>
+&nbsp;</P>
+
+<H4><A name="Struts2JCRPlugin-Strutsaction."></A>Struts action.</H4>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+public class AddressAction extends ActionSupport {
+    Long addressId;
+    Node address;
+    JcrTemplate jcrTemplate;
+    public String save() throws RepositoryException{
+      address.save();
+      return SUCCESS;
+    }
+    public Long getAddressId() {
+      return addressId;
+    }
+    public void setAddressId(Long addressId) {
+      this.addressId = addressId;
+    }
+    @JcrNode(node="/address", id="addressId")
+    public Node getAddress() {
+      return address;
+    }
+    public void setAddress(Node address) {
+      this.address = address;
+    }
+  }
+]]></SCRIPT>
+</DIV></DIV>
+
+<H4><A name="Struts2JCRPlugin-JSPpage"></A>JSP page</H4>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+  &lt;s:form action="address!save" name="addressForm" id="addressForm"&gt;
+      &lt;s:textfield name="address.country" size="50" label="Country" required="true"/&gt;
+      &lt;s:textfield name="address.city" size="50" label="City" required="true"/&gt;
+      &lt;s:textfield name="address.state" size="50" label="State" required="true"/&gt;
+      &lt;s:textfield name="address.address" size="50" label="Address" required="true"/&gt;
+  &lt;/s:form&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>&nbsp;Because the node is wrapped, jsp code interacts with the node in a way like it is java.util.Map.&nbsp; Then the page is rendered, the node is automatically loaded from repository using path from the annotation and the addressId provided as a parameter. After a user fills in&nbsp; and submits the form the node loaded again and it's properties are set by struts. The only thing we need to do is to save the node.</P>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

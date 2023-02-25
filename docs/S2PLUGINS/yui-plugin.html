@@ -1,0 +1,760 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>YUI Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="YUI Plugin">YUI Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">YUI Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=59914">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=59914">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=59914">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=59914">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=59914">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=59914">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=cody.burleson">Cody Burleson</A> on Apr 04, 2009
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=59914&originalId=114068">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Name </TH>
+<TD class="confluenceTd"> YUI Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Publisher </TH>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> License </TH>
+<TD class="confluenceTd"> Open Source (ASL2) </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TD class="confluenceTd"> 0.1-ALPHA-7 </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Compatibility </TH>
+<TD class="confluenceTd"> Struts 2.1.6&#43; </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Homepage </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2yuiplugin/" rel="nofollow">http://code.google.com/p/struts2yuiplugin/</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Download </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2yuiplugin/downloads/list" rel="nofollow">http://code.google.com/p/struts2yuiplugin/downloads/list</A> </TD>
+</TR>
+</TBODY></TABLE>
+<P><DIV id="rate59914">
+<DIV style="visibility:hidden; display:none;" id="rate59914.cookieName">rate-59914-21640</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('59914',document.Rate.rateURL+'&rateDir=dynamic&rateKey=59914&rateTitle=Rating&rating=0',false)" title="Display Results (25)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<H2><A name="YUIPlugin-Overview"></A>Overview</H2>
+
+<P>YUI plugin provides tags based on the Yahoo&#33; User Interface Library (YUI).</P>
+
+<H2><A name="YUIPlugin-GetStartedWithFiveEasySteps"></A>Get Started With Five Easy Steps</H2>
+
+<P><IMG src="yui-plugin.data/step1.gif" align="left" border="0" hspace="4"> <B>Step One</B></P>
+
+<P><A href="http://code.google.com/p/struts2yuiplugin/downloads/list" rel="nofollow">Download</A> the latest version of the YUI plugin and place the jar file in the WEB-INF/lib directory of your web application.</P>
+
+<P><IMG src="yui-plugin.data/step2.gif" align="left" border="0" hspace="4"> <B>Step Two</B></P>
+
+<P>Add the following taglib directive to your JSP pages:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;%@ taglib prefix="yui" uri="/struts-yui-tags" %&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P><IMG src="yui-plugin.data/step3.gif" align="left" border="0" hspace="4"> <B>Step Three</B></P>
+
+<P>Add class=&quot;yui-skin-sam&quot; to the &lt;body&gt; tag of your JSP pages:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;body class="yui-skin-sam"&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>Alternatively, you can wrap each YUI widget you use with a &lt;div&gt; tag that specifies the CSS class. For example:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;div class="yui-skin-sam"&gt;
+     &lt;yui:datepicker id="datepicker" name="date.picker" value="%{'2006-10-20'}" /&gt;
+&lt;/div&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P><IMG src="yui-plugin.data/step4.gif" align="left" border="0" hspace="4"> <B>Step Four</B></P>
+
+<P>Add the &lt;yui:head&gt; element in the &lt;head&gt; section of your JSP pages. You must add the &lt;yui:head&gt; element for each widget that you want to use on the page. For example, if you want to use the datepicker, your head section should look something like this:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;head&gt;
+     &lt;title&gt;YUI Date Picker Example&lt;/title&gt;
+     &lt;yui:head datepicker="true" /&gt;
+&lt;/head&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>If you want to use both the datepicker and the autocompleter in a page, the head section of that page would look like this:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;head&gt;
+     &lt;title&gt;YUI Date Picker Example&lt;/title&gt;
+     &lt;yui:head
+     	datepicker="true"
+     	tabview="true" /&gt;
+&lt;/head&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P><IMG src="yui-plugin.data/step5.gif" align="left" border="0" hspace="4"> <B>Step Five</B></P>
+
+<P>Finally, add the appropriate YUI tag for the widget within your JSP page. For example:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;body class="yui-skin-sam"&gt;
+     ...
+     &lt;yui:datepicker id="datepicker" name="date.picker" value="%{'2006-10-20'}" /&gt;
+     ...
+&lt;/body&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<H2><A name="YUIPlugin-Tags"></A>Tags</H2>
+
+
+<H3><A name="YUIPlugin-head"></A>head</H3>
+
+<P>This tag includes required javascript and css files. For each tag there will be an attribute on the head tag, which needs to be set to true, in order to use that tag. This will make sure that only required files are included on the page. For example, to use the <EM>datepicker</EM> tag:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;head&gt;
+     ...
+     &lt;yui:head datepicker="true"/&gt;
+     ...
+&lt;/head&gt;
+&lt;body&gt;
+     ...
+     &lt;yui:datepicker id="datepicker" name="datepicker" value="%{'2006-10-20'}" /&gt;
+     ...
+&lt;/body&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>Tag Attributes:</P>
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Attribute </TH>
+<TH class="confluenceTh"> Description </TH>
+<TH class="confluenceTh"> Required </TH>
+<TH class="confluenceTh"> Default Value </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> datepicker </TD>
+<TD class="confluenceTd"> Include <EM>datepicker</EM> tag required files </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> false </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> autocompleter </TD>
+<TD class="confluenceTd"> Include <EM>autocompleter</EM> tag required files </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> false </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> tabview<BR clear="all"> </TD>
+<TD class="confluenceTd"> Include tabview tag required files<BR clear="all"> </TD>
+<TD class="confluenceTd"> no<BR clear="all"> </TD>
+<TD class="confluenceTd"> false<BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssreset<BR clear="all"> </TD>
+<TD class="confluenceTd"> Include YUI Reset CSS file<BR clear="all"> </TD>
+<TD class="confluenceTd"> no<BR clear="all"> </TD>
+<TD class="confluenceTd"> false<BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssfonts<BR clear="all"> </TD>
+<TD class="confluenceTd"> Include YUI Fonts CSS file<BR clear="all"> </TD>
+<TD class="confluenceTd"> no<BR clear="all"> </TD>
+<TD class="confluenceTd"> false<BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssgrids<BR clear="all"> </TD>
+<TD class="confluenceTd"> Include YUI Grids CSS file<BR clear="all"> </TD>
+<TD class="confluenceTd"> no<BR clear="all"> </TD>
+<TD class="confluenceTd"> false<BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssbase<BR clear="all"> </TD>
+<TD class="confluenceTd"> Include YUI Base CSS file<BR clear="all"> </TD>
+<TD class="confluenceTd"> no<BR clear="all"> </TD>
+<TD class="confluenceTd"> false<BR clear="all"> </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> languages </TD>
+<TD class="confluenceTd"> Comma delimited list of language names to be loaded(supported languages are: 'de', 'it', 'es', 'fr') </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> Language of the request </TD>
+</TR>
+</TBODY></TABLE>
+
+<H3><A name="YUIPlugin-datepicker"></A>datepicker</H3>
+
+<TABLE class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><TBODY><TR>
+<TD class="confluenceTd" valign="top" width="1%">
+<P><IMG src="yui-plugin.data/yuiDatePickerExample.jpg" align="absmiddle" border="0"></P></TD>
+<TD class="confluenceTd" valign="top" width="99%">
+<P>This tag is based on <A href="http://developer.yahoo.com/yui/calendar/" rel="nofollow">YUI Calendar</A>.It can be rendered in 3 different ways, which are controlled by the <EM>mode</EM> attribute:</P>
+<UL>
+	<LI>static : The datepicker is always visible on the page</LI>
+	<LI>input  : Default. An input is added to the page, with an image that shows and hides the datepicker.</LI>
+	<LI>label  : A label is added to the page that shows the current selected date, with an image that shows and hides the datepicker.</LI>
+</UL>
+
+
+<P>The <EM>datepicker</EM> tag adds a hidden field to the page which will be used by Struts. The value of this field is in RFC3339 format. Values entered on the visible input (when mode=&quot;input&quot;) are synchronized with the hidden field.</P>
+
+<P>The initial value can be set from the stack, using the <EM>value</EM> attribute. This value can be of type java.util.Date(recommended), java.util.Calendar. If the value is an string, the the following formats will be used while trying to parse it:</P>
+<UL>
+	<LI>RFC3339</LI>
+	<LI>SimpleDateFormat.getDateInstance(DateFormat.SHORT)</LI>
+	<LI>SimpleDateFormat.getDateInstance(DateFormat.MEDIUM)</LI>
+	<LI>SimpleDateFormat.getDateInstance(DateFormat.FULL)</LI>
+	<LI>SimpleDateFormat.getDateInstance(DateFormat.LONG)</LI>
+</UL>
+</TD></TR></TBODY></TABLE>
+<P>Please not that this is the format of the string used in the <EM>value</EM> attribute, not the display format, which is always MM/dd/yyyy and can be customized using the <EM>formatFunction</EM> attribute.</P>
+
+<P>Using a value from the stack:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;yui:datepicker id="datepicker" name="datepicker" value="date"/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>Using an string value:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;yui:datepicker id="datepicker" name="datepicker" value="%{'2006-10-20'}"/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>Using 'today' constant:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;yui:datepicker id="datepicker" name="datepicker" value="%{'today'}"/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>The current value is always displayed in the format MM/dd/yyyy (when <EM>mode</EM> is either 'label' or 'input'). To customize this behavior, a function name can be specified in the <EM>formatFunction</EM> attribute. The value returned from this function will be shown on the input o the label. <B>This value is not the one that is used by Struts</B>. When the page loads, if an initial value was set for the <EM>datepicker</EM> tag, the function will be called with that value as an <B>String parameter</B>. When the user selects a value (or types into the input) from the <EM>datepicker</EM> the function will be called with the selected date as a <B>Date parameter</B>.</P>
+
+<P>The following example displays the selected value in the format yyyy.MM.dd:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;yui:datepicker id="datepicker" name="datepicker" value="%{'2006-10-20'}" formatFunction="format"/&gt;
+&lt;script&gt;
+    function format(dt) {
+      if(YAHOO.lang.isString(dt)) {
+         var parts = dt.split("/");
+         var month = parts[0];
+         var day = parts[1];
+         var year = parts[2];
+         return year + "." + month + "." + day;
+      } else {
+         var month = dt.getMonth();
+         var day = dt.getDate();
+         var year = dt.getFullYear();
+         return year + "." + month + "." + day;
+      }
+    }
+&lt;/script&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>By default the language defined in the request will be used on the <EM>datepicker</EM>. Supported languages are 'en'(default), 'de', 'es', 'it', 'fr'. Use the <EM>language</EM> attribute to specify a different(from the request) language.</P>
+
+<P>Example using Italian:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;yui:head datepicker="true" languages="it" /&gt;
+&lt;yui:datepicker id="datepicker" name="datepicker" language="it"/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>YUI's calendar supports internationalization. To use a locale that is not supported(please consider contributing the resource names for inclusion in the plugin) see <A href="http://developer.yahoo.com/yui/calendar/" rel="nofollow">YUI's documentation </A>.</P>
+
+<P>Example using i18n on German:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;yui:datepicker id="datepicker" name="datepicker" value="%{'2006-10-20'}" /&gt;
+&lt;script&gt;
+    YAHOO.util.Event.addListener(window, "load", function() {
+        YAHOO.datepickers.datepicker.cfg.setProperty("MONTHS_SHORT",   ["Jan", "Feb", "M\u00E4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]);
+        YAHOO.datepickers.datepicker.cfg.setProperty("MONTHS_LONG",    ["Januar", "Februar", "M\u00E4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]);
+        YAHOO.datepickers.datepicker.cfg.setProperty("WEEKDAYS_1CHAR", ["S", "M", "D", "M", "D", "F", "S"]);
+        YAHOO.datepickers.datepicker.cfg.setProperty("WEEKDAYS_SHORT", ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]);
+        YAHOO.datepickers.datepicker.cfg.setProperty("WEEKDAYS_MEDIUM",["Son", "Mon", "Die", "Mit", "Don", "Fre", "Sam"]);
+        YAHOO.datepickers.datepicker.cfg.setProperty("WEEKDAYS_LONG",  ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]);
+    });
+&lt;/script&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>As you might have noted on the example above, for each calendar an object is created on th global scope with the name <EM>YAHOO.datepicker.id</EM> where &quot;id&quot; is the id of the date picker.</P>
+<DIV class="panelMacro"><TABLE class="noteMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/warning.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><P>For each calendar an object is created on th global scope with the name <EM>YAHOO.datepicker.id</EM> where &quot;id&quot; is the id of the date picker. For the date picker:<BR>
+&lt;yui:datepicker id=&quot;dp&quot; name=&quot;dp&quot; value=&quot;%{'today'}&quot;/&gt;</P>
+
+<P>The object <EM>YAHOO.datepickers.dp</EM> will be created on the global scope.</P></TD></TR></TABLE></DIV>
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Attribute </TH>
+<TH class="confluenceTh"> Description </TH>
+<TH class="confluenceTh"> Required </TH>
+<TH class="confluenceTh"> Default Value </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> id </TD>
+<TD class="confluenceTd"> is used in the JavaScript object name that will be created for each <EM>datepicker</EM> </TD>
+<TD class="confluenceTd"> yes </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> name </TD>
+<TD class="confluenceTd"> name that will be used on the hidden field containing the date value in RFC3339, used by Struts </TD>
+<TD class="confluenceTd"> yes </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> value </TD>
+<TD class="confluenceTd"> Initial value. Read from the Value Stack, use %{'2007-10-09'} format for string literals </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> formatFunction </TD>
+<TD class="confluenceTd"> Function called on page loads(value is passed as an String parameter), and when user changes the selected value(value is passed as a Date object). The returned value will be used on the input or label </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> autoClose </TD>
+<TD class="confluenceTd"> Close <EM>datepicker</EM> when a date is selected </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> true </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> startDate </TD>
+<TD class="confluenceTd"> First enabled date on calendar </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> endDate </TD>
+<TD class="confluenceTd"> Last enabled date on calendar </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssClass </TD>
+<TD class="confluenceTd"> css class applied to the input or label </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssStyle </TD>
+<TD class="confluenceTd"> css style applied to the input or label </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> language </TD>
+<TD class="confluenceTd"> Name of language to be used (two lowercase characters), supported languages are 'de', 'es', 'fr', 'it'. If the language is not the one defined on the request, it needs to be specified on head also </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> 'en' </TD>
+</TR>
+</TBODY></TABLE>
+<DIV class="panelMacro"><TABLE class="tipMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>Using 'input' mode</B><BR><P>When using the 'input' mode, the value entered on the input is assumed to be on the format MM/dd/yyyy, if it isn't on that format, the value won't be parsed and will be copied verbatim to the hidden field, which Struts won't probably be able to parse. Tip: Use String fields on your action when using 'input' mode, and define your own converter.</P></TD></TR></TABLE></DIV>
+
+<H3><A name="YUIPlugin-autocompleter"></A>autocompleter</H3>
+
+<P><IMG src="yui-plugin.data/yuiAutoCompleteExample.jpg" align="left" border="0"> The <EM>autocompleter</EM> tag creates the <A href="http://developer.yahoo.com/yui/autocomplete/" rel="nofollow">YUI AutoComplete</A> control which provides the front-end logic for text-entry suggestion and completion functionality. See the <A href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=autocomplete" rel="nofollow">Yahoo&#33; UI Design Pattern Library description for AutoComplete</A> to get a fuller sense of the underlying design patterns in the AutoComplete family.</P>
+
+<P><BR clear="all"></P>
+
+<P>The autocompleter loads a list of options from a url that returns a JSON string in the following form:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: javascript; gutter: false"><![CDATA[
+{
+   "results": [
+     {
+       "key":"AL",
+       "value":"Alabama"
+     },
+     {
+       "key":"AK",
+       "value":"Alaska"
+     }
+   ]
+}
+]]></SCRIPT>
+</DIV></DIV>
+<P>The <A href="json-plugin.html" rel="nofollow">JSON Plugin</A> can be used to generate this JSON string. The following example shows how:</P>
+
+<P>The Action</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package org.apache.struts2.showcase.ajax;
+
+import com.googlecode.struts2yuiplugin.json.AutocompleterResult;
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class AjaxTestAction extends ActionSupport {
+    private String state;
+    private String stateKey;
+    private String query;
+
+    public String execute() {
+       //state an stateKey will have the selected values
+      return Action.SUCCESS;
+    }
+
+    public String loadOptions() {
+        return Action.SUCCESS;
+    }
+
+    public AutocompleterResult getOptions() {
+        AutocompleterResult result = new AutocompleterResult();
+
+        if (query.equals("A")) {
+            result.add("AL", "Alabama");
+            result.add("AK", "Alaska");
+        }
+
+        return result;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setStateKey(String stateKey) {
+        this.stateKey = stateKey;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+<P>The mapping:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;package name="yui" namespace="/nodecorate"  extends="json-default"&gt;
+     &lt;action name="AjaxTest" class="org.apache.struts2.showcase.ajax.AjaxTestAction"&gt;
+         &lt;result type="json"&gt;
+              &lt;param name="root"&gt;options&lt;/param&gt;
+         &lt;/result&gt;
+     &lt;/action&gt;
+&lt;/package&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<DIV class="panelMacro"><TABLE class="warningMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><UL>
+	<LI>When generating the JSON result make sure that the result is not decorated (by Sitemesh, Tiles, etc)</LI>
+	<LI>When extending &quot;json-default&quot; as shown on the package definition in the mapping example above, the <A href="json-plugin.html" title="JSON Plugin">JSON plugin</A> is required.</LI>
+</UL>
+</TD></TR></TABLE></DIV>
+<P>The JSP:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;%@ taglib prefix="yui" uri="/struts-yui-tags" %&gt;
+&lt;%@ taglib prefix="s" uri="/struts-tags" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;yui:head autocompleter="true" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;s:url id="statesUrl" namespace="/nodecorate" action="AjaxTest" includeParams='none'/&gt;
+    &lt;s:form namespace="/nodecorate" action="AjaxTest.action"&gt;
+        &lt;yui:autocompleter id="state" name="state" href="%{#statesUrl}" containerCssStyle="width:100px" /&gt;
+        &lt;s:submit /&gt;
+    &lt;/s:form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Attribute </TH>
+<TH class="confluenceTh"> Description </TH>
+<TH class="confluenceTh"> Required </TH>
+<TH class="confluenceTh"> Default Value </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> id </TD>
+<TD class="confluenceTd"> is used in the JavaScript object name that will be created for each <EM>autocompleter</EM> </TD>
+<TD class="confluenceTd"> yes </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> name </TD>
+<TD class="confluenceTd"> name of the input </TD>
+<TD class="confluenceTd"> yes </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssClass </TD>
+<TD class="confluenceTd"> css class applied to the input </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> cssStyle </TD>
+<TD class="confluenceTd"> css style applied to the input </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> containerCssClass </TD>
+<TD class="confluenceTd"> css class applied to the input </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> ysearchcontainer&quot;) </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> containerCssStyle </TD>
+<TD class="confluenceTd"> css style applied to the input </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> href </TD>
+<TD class="confluenceTd"> URL used to load the options. Accepts a literal value, for a value from the Value Stack use the &#95;%{#url}_notation </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> none </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> keyName </TD>
+<TD class="confluenceTd"> Name of the key field </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> ${name}Key </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> dataFieldName </TD>
+<TD class="confluenceTd"> Full patch of the field that has th array with the options in the JSON returned from the request, like <EM>field1.field2</EM> </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> results </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> resultsLimit </TD>
+<TD class="confluenceTd"> Limit how many results are shown as autocompletion options </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> 10 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> loadMinimumCount </TD>
+<TD class="confluenceTd"> Minimum number of characters that will force the options to be loaded </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> 1 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> delay </TD>
+<TD class="confluenceTd"> Delay(in seconds) before making query to load options </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> 0.5 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> autoHighlight </TD>
+<TD class="confluenceTd"> Autohighlight first element on the list </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> true </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> useShadow </TD>
+<TD class="confluenceTd"> The dropdown will have a shadow, the CSS class for the shadow is 'yui-ac-shadow' </TD>
+<TD class="confluenceTd"> no </TD>
+<TD class="confluenceTd"> false </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> forceValidOption </TD>
+<TD class="confluenceTd"> Force selection to be one of the options </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> false </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> autocomplete </TD>
+<TD class="confluenceTd"> Warning: This behavior seems to have a few bugs on YUI's implementation. Will make suggestions on the input based on the text entered by user </TD>
+<TD class="confluenceTd"> none </TD>
+<TD class="confluenceTd"> false </TD>
+</TR>
+</TBODY></TABLE>
+
+<H3><A name="YUIPlugin-tabviewandtab"></A>tabview and tab</H3>
+
+<P><IMG src="yui-plugin.data/yuiTabViewExample.jpg" align="left" border="0"> The tabview and tab tags are used together to create a TabView widget. Currently, only very basic TabView support is implemented.
+<BR clear="all"></P>
+
+<P><B>JSP Example</B></P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;yui:tabview id="myTabView"&gt;
+     &lt;yui:tab id="tab0" label="Tab 0"&gt;
+          &lt;p&gt;This is Tab 0 content&lt;/p&gt;
+     &lt;/yui:tab&gt;
+     &lt;yui:tab id="tab1" label="Tab 1"&gt;
+          &lt;p&gt;This is Tab 1 content&lt;/p&gt;
+     &lt;/yui:tab&gt;
+     &lt;yui:tab id="tab2" label="Tab 2"&gt;
+          &lt;p&gt;This is Tab 2 content&lt;/p&gt;
+     &lt;/yui:tab&gt;
+&lt;/yui:tabview&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+
+<H2><A name="YUIPlugin-Installation"></A>Installation</H2>
+
+<P>This plugin can be installed by copying the plugin jar into your application's <TT>/WEB-INF/lib</TT> directory.  No other files need to be copied or created.</P>
+
+<H2><A name="YUIPlugin-VersionHistory"></A>Version History</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1-ALPHA-4 </TD>
+<TD class="confluenceTd"> Jun 22, 2007 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> </TD>
+<TD class="confluenceTd"> Add autocompleter tag </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1-ALPHA-3 </TD>
+<TD class="confluenceTd"> Jun 20, 2007 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> </TD>
+<TD class="confluenceTd"> Add support for i18n, 'de', 'es', 'fr', 'it'. Fix  RFC bug </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1-ALPHA </TD>
+<TD class="confluenceTd"> Jun 19, 2007 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+</TBODY></TABLE>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

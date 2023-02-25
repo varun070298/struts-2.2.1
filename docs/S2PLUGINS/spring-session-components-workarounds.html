@@ -1,0 +1,619 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Spring Session Components Workarounds</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="spring-plugin.html" title="Spring Plugin">Spring Plugin</A>&nbsp;&gt;&nbsp;<A href="" title="Spring Session Components Workarounds">Spring Session Components Workarounds</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Spring Session Components Workarounds</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14172">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14172">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14172">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14172">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14172">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14172">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=rgielen">Rene Gielen</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=mrdon">Don Brown</A> on Dec 29, 2006
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=14172&originalId=33409">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          
+
+<H1><A name="SpringSessionComponentsWorkarounds-Motivation"></A>Motivation</H1>
+
+<P>Spring currently does not support session scoped beans/components out of the box. You can decide between singleton or prototype lifecycle, but you cannot have your beans bound to the session lifecycle of web applications. There are plans for integrating such a feature in the Spring 2.0 release.<BR>
+We will try to point out some possible workarounds for your WebWork based applications. First we look at the general solutions found among the Spring community, dealing with HTTPSession and all that. After that we will discuss the special conditions and requirements found in XWork/WebWork and how that might affect possible solutions. We will show some XWork/WebWork specific solutions for the given problem.</P>
+
+<DIV class="panelMacro"><TABLE class="infoMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><P>The first milestone of Spring 2.0 (formerly 1.3) will be released the second week of December 2005.  It is confirmed that it does contain Session Scope components using the Proxy (CGLIB or JDK) approach.</P></TD></TR></TABLE></DIV>
+
+<H1><A name="SpringSessionComponentsWorkarounds-GeneralSolutionsforWebapplications"></A>General Solutions for Webapplications</H1>
+
+<H2><A name="SpringSessionComponentsWorkarounds-TheSpring2.0Way"></A>The Spring 2.0 Way</H2>
+<P>Interface21 added support for session (and request) scoped beans in Spring 2.0.  This approach creates a CGLIB or JDK Dynamic proxy of the session scoped bean using the org.springframework.aop.target.scope.ScopedProxyFactoryBean and setting the scopeMap to org.springframework.web.context.scope.SessionScopeMap.</P>
+
+<P>Since the jars are backwards compatible simply build Spring and replace the jars shipped with WebWork. (Spring 2.0 M1 should be out by the time you read this.).</P>
+
+<P>There are 2 ways to set this up depending upon whether or not XML simplification is used.  The first method uses the traditional bean definitions and is useful to understand what is happening under the covers.</P>
+
+<P>A modified applicationContext.xml for the shopping cart example using the traditional XML DTD is below.</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"&gt;
+
+&lt;beans&gt;
+    &lt;bean id="shoppingCart" class="org.springframework.aop.target.scope.ScopedProxyFactoryBean"
+            singleton="false"&gt;
+        &lt;property name="scopeKey" value="shoppingCart"/&gt;
+        &lt;property name="targetBeanName" value="__shoppingCart"/&gt;
+        &lt;property name="scopeMap"&gt;
+            &lt;bean class="org.springframework.web.context.scope.SessionScopeMap"/&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+
+    &lt;bean id="__shoppingCart" class="com.opensymphony.webwork.example.ajax.cart.DefaultCart"
+            singleton="false"/&gt;
+
+&lt;/beans&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>A modified applicationContext.xml for the shopping cart example using the XML simplification is below.</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"&gt;
+
+    &lt;bean id="catalog" class="com.opensymphony.webwork.example.ajax.catalog.TestCatalog"
+          singleton="true"/&gt;
+
+    &lt;bean id="shoppingCart" class="com.opensymphony.webwork.example.ajax.cart.DefaultCart"
+          singleton="true"&gt;
+        &lt;aop:scope type="session"/&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>You will also need to modify the web.xml to include the following filter.</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;filter&gt;
+    &lt;filter-name&gt;springFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.springframework.web.filter.RequestContextFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;springFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<H2><A name="SpringSessionComponentsWorkarounds-CustomTargetSourcewithaServletFilter"></A>Custom TargetSource with a ServletFilter</H2>
+<P>A quite &quot;clean&quot; solution for web applications in general can be found at <A href="http://ja-sig.org/" rel="nofollow">JA-SIG</A>. The solution is well documented and can be found <A href="https://clearinghouse.ja-sig.org/wiki/display/UPC/Session%20Scoped%20Beans" rel="nofollow">here</A>. Below you will find a WebWork adoption of this solution.</P>
+
+
+
+<H1><A name="SpringSessionComponentsWorkarounds-XWork%2FWebWorkspecificsolutions"></A>XWork/WebWork specific solutions</H1>
+
+<H2><A name="SpringSessionComponentsWorkarounds-Preface"></A>Preface</H2>
+<P>WebWork is based on XWork, and XWork is not tied to the web layer. So when dealing with session scoped objects, WW users might want to use XWork's session abstraction features to keep their application independent from the web context. This is why we will discuss some XW/WW specific solutions below.</P>
+
+
+<H2><A name="SpringSessionComponentsWorkarounds-CustomTargetSource%2CtheWebWorkway"></A>Custom TargetSource, the WebWork way</H2>
+
+<P>Here is a modified version of the TargetSource solution pointed out above that integrates with the existing WebWork session and doesn't require an additional filter or listener. Usage is pretty much the same, create an interface for your object and make sure that you always use that interface and not the underlying implementation or autowiring will fail. You can find more information on how to make this work by looking at the <A href="webworktargetsource-shopping-cart-example.html" title="WebWorkTargetSource Shopping Cart Example">WebWorkTargetSource Shopping Cart Example</A>.</P>
+
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>WebWorkTargetSource.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package org.tuxbot.webwork.spring;
+
+/* Portions Copyright 2005 The JA-SIG Collaborative.  All rights reserved.
+ *  See license distributed with this file and
+ *  available online at http://www.uportal.org/license.html
+ */
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.aop.target.AbstractPrototypeBasedTargetSource;
+import org.springframework.beans.factory.DisposableBean;
+import com.opensymphony.xwork.ActionContext;
+
+import java.util.Map;
+
+/**
+ * This target source is to be used in collaberation with WebWork.
+ * The target source binds the target bean to the Session retrieved from
+ * WebWork. By default the bean is bound to the session
+ * using the name of the target bean as part of the key. This can be overridden by setting
+ * the &lt;code&gt;sessionKey&lt;/code&gt; property to a not null value.
+ *
+ * @author Eric Dalquist &lt;a href="mailto:edalquist@unicon.net"&gt;edalquist@unicon.net&lt;/a&gt;
+ * @author Eric Molitor &lt;a href="mailto:eric@tuxbot.com"&gt;eric@tuxbot.com&lt;/a&gt;
+ * @version 1.0
+ */
+public class WebWorkTargetSource extends AbstractPrototypeBasedTargetSource implements DisposableBean {
+    private final static Log LOG = LogFactory.getLog(WebWorkTargetSource.class);
+
+    private transient Object noSessionInstance = null;
+    private String sessionKey = null;
+    private String compiledSessionKey = null;
+
+    public WebWorkTargetSource() {
+        this.updateBeanKey();
+    }
+
+    /**
+     * @return Returns the sessionKey.
+     */
+    public String getSessionKey() {
+        return this.sessionKey;
+    }
+    /**
+     * @param sessionKey The sessionKey to set.
+     */
+    public void setSessionKey(String sessionKey) {
+        this.sessionKey = sessionKey;
+        this.updateBeanKey();
+    }
+    /**
+     * @see org.springframework.aop.target.AbstractBeanFactoryBasedTargetSource#setTargetBeanName(java.lang.String)
+     */
+    public void setTargetBeanName(String targetBeanName) {
+        super.setTargetBeanName(targetBeanName);
+        this.updateBeanKey();
+    }
+
+    /**
+     * @see org.springframework.aop.TargetSource#getTarget()
+     */
+    public Object getTarget() throws Exception {
+        final Map session = ActionContext.getContext().getSession();
+
+        if (session == null) {
+            LOG.warn("No Session found for thread '" + Thread.currentThread().getName() + "'");
+
+            if (this.noSessionInstance == null) {
+                this.noSessionInstance = this.newPrototypeInstance();
+
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Created instance of '" + this.getTargetBeanName() + "', not bound to any webWorkSession.");
+                }
+            }
+            else {
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Found instance of '" + this.getTargetBeanName() + "', not bound to any webWorkSession.");
+                }
+            }
+
+            return this.noSessionInstance;
+        }
+        else {
+            String beanKey = this.compiledSessionKey;
+
+            Object instance = session.get(beanKey);
+            if (instance == null) {
+                instance = this.newPrototypeInstance();
+                session.put(beanKey, instance);
+
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Created instance of '" + this.getTargetBeanName() + "', bound to webWorkSession for '" 
+                       + Thread.currentThread().getName() + "' using key '" + beanKey + "'.");
+                }
+            }
+            else if (LOG.isDebugEnabled()) {
+                LOG.debug("Found instance of '" + this.getTargetBeanName() + "', bound to webWorkSession for '" 
+                       + Thread.currentThread().getName() + "' using key '" + beanKey + "'.");
+            }
+
+            return instance;
+        }
+    }
+
+    /**
+     * @see org.springframework.beans.factory.DisposableBean#destroy()
+     */
+    public void destroy() throws Exception {
+        if (this.noSessionInstance != null &amp;&amp; this.noSessionInstance instanceof DisposableBean) {
+            if (LOG.isDebugEnabled()) {
+                LOG.debug("Destroying sessionless bean instance '" + this.noSessionInstance + "'");
+            }
+
+            ((DisposableBean)this.noSessionInstance).destroy();
+        }
+    }
+
+    /**
+     * Generates the key to store the bean in the session with.
+     */
+    private void updateBeanKey() {
+        if (this.sessionKey == null) {
+            final StringBuffer buff = new StringBuffer();
+
+            buff.append(this.getClass().getName());
+            buff.append("_");
+            buff.append(this.getTargetBeanName());
+
+            this.compiledSessionKey = buff.toString();
+        }
+        else {
+            this.compiledSessionKey = this.sessionKey;
+        }
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+
+<H2><A name="SpringSessionComponentsWorkarounds-CustomizedApplicationContextImplementation"></A>Customized ApplicationContext Implementation</H2>
+<P><B>TODO: Document</B></P>
+
+<H2><A name="SpringSessionComponentsWorkarounds-CustomizedWW%2FXWObjectFactory"></A>Customized WW/XW ObjectFactory</H2>
+<P><B>TODO: Document</B></P>
+
+<H2><A name="SpringSessionComponentsWorkarounds-SessionbackedBeanFactory"></A>Session backed Bean Factory</H2>
+<P>The idea is to simply create a retrieve-or-create bean factory:</P>
+
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>SessionBackedBeanFactory.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package net.itneering.core.spring.session;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+
+import com.opensymphony.xwork.ActionContext;
+
+import java.util.Map;
+import java.io.Serializable;
+
+/**
+ * SessionBackedBeanFactory tries to lookup beans by name in XWork session. If not found,
+ * it tries to instantiate new bean and attaches it to said session.
+ *
+ * @author &lt;a href="mailto:gielen@it-neering.net"&gt;Rene Gielen&lt;/a&gt;
+ */
+
+public class SessionBackedBeanFactory implements Serializable, BeanFactoryAware {
+
+    BeanFactory beanFactory = null;
+
+    /**
+     * Find a component by name in session scoped storage implementation. If not found, try to instantiate new one by
+     * {@link org.springframework.beans.factory.BeanFactory#getBean(String)}. Then found component will be attached
+     * to session store implementation.
+     *
+     * @param componentName
+     * @return The requested component, if found.
+     */
+    public Object getSessionComponent( String componentName ) {
+        Object result = getSession().get(componentName);
+        if ( result == null ) {
+            result = beanFactory.getBean(componentName);
+            storeComponent(componentName, result);
+        }
+        return result;
+    }
+
+    public void storeComponent(String componentName, Object component ) {
+        getSession().put(componentName, component);
+    }
+
+    /**
+     * Actual implementation of the session scoped storage Map.
+     * Lookup {@link com.opensymphony.xwork.ActionContext#getSession()}.
+     *
+     * @return The Map for keeping session objects.
+     */
+    public Map getSession() {
+        return ActionContext.getContext().getSession();
+    }
+
+    /**
+     * Callback that supplies the owning factory to a bean instance.
+     * &lt;p&gt;Invoked after population of normal bean properties but before an init
+     * callback like InitializingBean's afterPropertiesSet or a custom init-method.
+     *
+     * @param beanFactory owning BeanFactory (may not be null).
+     *                    The bean can immediately call methods on the factory.
+     *
+     * @throws org.springframework.beans.BeansException
+     *          in case of initialization errors
+     * @see org.springframework.beans.factory.BeanInitializationException
+     */
+    public void setBeanFactory( BeanFactory beanFactory ) throws BeansException {
+        this.beanFactory = beanFactory;
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>Example applicationContext setup (note that the session scoped bean has to be setup with singleton=&quot;false&quot;):</P>
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>applicationContext.xml</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"&gt;
+&lt;beans default-autowire="byName"&gt;
+    &lt;bean id="sessionBeanProxy" class="net.itneering.core.spring.session.SessionBackedBeanFactory" singleton="true"/&gt;
+    &lt;bean id="securityContextComponent" class="net.itneering.security.component.DefaultSecurityContextComponent" singleton="false" /&gt;
+&lt;/beans&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>Example action use:</P>
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>SecurityAwareAction.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package net.itneering.xwork.action;
+
+import com.opensymphony.xwork.ActionSupport;
+import net.itneering.core.spring.session.SessionBackedBeanFactory;
+import net.itneering.security.component.DefaultSecurityContextComponent;
+
+/**
+ * Simple sessionBeanProxy aware action.
+ *
+ * @author &lt;a href="mailto:gielen@it-neering.net"&gt;Rene Gielen&lt;/a&gt;
+ * @version $Revision: 1.1 $
+ */
+
+public class SecurityAwareAction extends ActionSupport implements PrincipalAware {
+
+    private static final Logger log = Logger.getLogger(SecurityAwareAction.class);
+
+    protected SessionBackedBeanFactory sessionBeanProxy;
+
+    /**
+     * For Spring wiring usage.
+     *
+     * @param sessionBeanProxy The sessionBeanProxyto use.
+     */
+    public void setSessionBeanProxy( SessionBackedBeanFactory sessionBeanProxy ) {
+        this.sessionBeanProxy = sessionBeanProxy;
+    }
+
+    /**
+     * Getter for actions security context.
+     *
+     * @return The securityContextComponent set by IoC.
+     */
+    public SecurityContextComponent getSecurityContextComponent() {
+        return sessionBeanProxy!= null ? sessionBeanProxy.getSessionComponent("securityContextComponent") : null;
+    }
+
+    /**
+     * Get the current User Principal for this session.
+     *
+     * @return The User Principal.
+     */
+    public UserEntity getPrincipal() {
+        try {
+            return getSecurityContextComponent().getPrincipal();
+        } catch ( NullPointerException e ) {
+            return null;
+        }
+    }
+    ...
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>For well known session scoped components, you might get more convenience by subclassing SessionBackedBeanFactory:</P>
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>SecurityAwareSessionBeanProxy.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package net.itneering.security.component;
+
+import net.itneering.core.spring.session.SessionBackedBeanFactory;
+
+/**
+ * SecurityAwareSessionBeanProxy.
+ *
+ * @author &lt;a href="mailto:gielen@it-neering.net"&gt;Rene Gielen&lt;/a&gt;
+ */
+
+public class SecurityAwareSessionBeanProxy extends SessionBackedBeanFactory {
+
+    String securityContextComponentName = "securityContextComponent";
+
+    /**
+     * Make component name configurable by spring setup
+     */
+    public void setSecurityContextComponentName( String securityContextComponentName ) {
+        this.securityContextComponentName = securityContextComponentName;
+    }
+
+    public SecurityContextComponent getSecurityContextComponent() {
+        return (SecurityContextComponent) getSessionComponent(securityContextComponentName);
+    }
+
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>Again example applicationContext setup:</P>
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>applicationContext2.xml</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"&gt;
+&lt;beans default-autowire="byName"&gt;
+    &lt;bean id="mySecurityContextComponent" class="net.itneering.security.component.DefaultSecurityContextComponent" singleton="false" /&gt;
+    &lt;bean id="sessionBeanProxy" class="net.itneering.security.component.SecurityAwareSessionBeanProxy" singleton="true"&gt;
+        &lt;property name="securityContextComponentName" value="mySecurityContextComponent" /&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>Example action use:</P>
+<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>SecurityAwareAction2.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package net.itneering.xwork.action;
+
+import com.opensymphony.xwork.ActionSupport;
+import net.itneering.security.component.SecurityAwareSessionBeanProxy;
+import net.itneering.security.component.DefaultSecurityContextComponent;
+
+/**
+ * Simple sessionBeanProxy aware action.
+ *
+ * @author &lt;a href="mailto:gielen@it-neering.net"&gt;Rene Gielen&lt;/a&gt;
+ * @version $Revision: 1.1 $
+ */
+
+public class SecurityAwareAction extends ActionSupport implements PrincipalAware {
+
+    private static final Logger log = Logger.getLogger(SecurityAwareAction.class);
+
+    protected SecurityAwareSessionBeanProxy sessionBeanProxy;
+
+    /**
+     * For Spring wiring usage.
+     *
+     * @param sessionBeanProxy The sessionBeanProxy to use.
+     */
+    public void setSessionBeanProxy( SecurityAwareSessionBeanProxy sessionBeanProxy ) {
+        this.sessionBeanProxy = sessionBeanProxy;
+    }
+
+    /**
+     * Get the current User Principal for this session.
+     *
+     * @return The User Principal.
+     */
+    public UserEntity getPrincipal() {
+        try {
+            return sessionBeanProxy.getSecurityContextComponent().getPrincipal();
+        } catch ( NullPointerException e ) {
+            return null;
+        }
+    }
+    ...
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>As said, the solution is very simple. You will get no ties to web layer, and the configuration is really simple, there is no need for proxy definitions in applicationContext.xml etc.<BR>
+The main disadvantage is that you will not be able to wire session scoped beans directly into your actions, you will have to use the indirection via the session backed bean factory. And, as always when dealing with XWork session abstraction, you have to take care for a action context to be setup.</P>
+
+<H2><A name="SpringSessionComponentsWorkarounds-AutoproxiedSessionbackedComponentFactory"></A>Auto proxied Session backed Component Factory</H2>
+<P>Does anyone have an implementation of this? (Eric Molitor)<BR>
+The intention was a bit different for this one, so I tried to clarify headings. Nice idea, though ... (Rene Gielen).<BR>
+The theory here is to create a custom Pointcut class that utilizes the ComponentConfiguration retrieved from the DefaultComponentManager (which loads the Component list from components.xml). The getClassFilter() matches anything that implements one of the Components in the ComponentConfiguration. The Pointcut is then registered as an advisor for all beans (AutoProxy via Springs DefaultAdvisorAutoProxyCreator). The Advice implementation looks at which Component is implmented and fetches the apporiate value out of the Session and calls the Components setter method. <BR>
+<B>TODO: Document, create example</B></P>
+        </DIV>
+
+                  <DIV class="tabletitle">
+            Children
+            <SPAN class="smalltext" id="show" style="display: inline;">
+              <A href="javascript:showChildren()">Show Children</A></SPAN>
+            <SPAN class="smalltext" id="hide" style="display: none;">
+              <A href="javascript:hideChildren()">Hide Children</A></SPAN>
+          </DIV>
+          <DIV class="greybox" id="children" style="display: none;">
+                                      <A href="webworktargetsource-shopping-cart-example.html" title="WebWorkTargetSource Shopping Cart Example">WebWorkTargetSource Shopping Cart Example</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                      </DIV>
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

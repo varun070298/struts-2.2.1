@@ -1,0 +1,156 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="../../../resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>jQuery plugin - Version 2.0.0</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="../../../home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;2010&nbsp;&gt;&nbsp;03&nbsp;&gt;&nbsp;22&nbsp;&gt;&nbsp;<A href="" title="jQuery plugin - Version 2.0.0">jQuery plugin - Version 2.0.0</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">jQuery plugin - Version 2.0.0</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14813449">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=14813449">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14813449">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=14813449">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14813449">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=14813449">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A> on Mar 22, 2010
+                      
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <P><B>Projekt Home</B>: <A href="http://code.google.com/p/struts2-jquery" rel="nofollow">http://code.google.com/p/struts2-jquery</A><BR>
+<B>Plugin Home</B>: <A href="http://cwiki.apache.org/S2PLUGINS/jquery-plugin-easy-ajax-and-widget-integration.html" rel="nofollow">http://cwiki.apache.org/S2PLUGINS/jquery-plugin-easy-ajax-and-widget-integration.html</A><BR>
+<B>Showcase and Examples</B>: <A href="http://www.weinfreund.de/struts2-jquery-showcase/" rel="nofollow">http://www.weinfreund.de/struts2-jquery-showcase/</A><BR>
+<B>User Group</B>: <A href="http://groups.google.com/group/struts2-jquery" rel="nofollow">http://groups.google.com/group/struts2-jquery</A></P>
+
+<P>Changelog:</P>
+<UL>
+	<LI>Upgrade to jQuery 1.4.2 ( <A href="http://www.jgeppert.com/p/struts2-jquery/issues/detail?id=91" rel="nofollow">Issue  91</A> )</LI>
+	<LI>Upgrade to jQuery UI 1.8.0</LI>
+	<LI>Upgrade to <A href="http://www.trirand.com/blog/wp-trackback.php?p=629" rel="nofollow">jqGrid 3.6.4</A></LI>
+	<LI>Upgrade to jQuery Form Plugin 2.43</LI>
+	<LI>Implement an <A href="http://code.google.com/p/struts2-jquery/wiki/AutocompleterTag" rel="nofollow">Autocompleter</A> ( <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=10" rel="nofollow">Issue  10</A> )</LI>
+	<LI>Implement an Radiomap as jQuery UI <A href="http://code.google.com/p/struts2-jquery/wiki/Buttonset" rel="nofollow">Buttonset</A></LI>
+	<LI>Implement an CheckboxList<A href="http://code.google.com/p/struts2-jquery/w/edit/CheckboxList" rel="nofollow">?</A> as jQuery UI <A href="http://code.google.com/p/struts2-jquery/wiki/Buttonset" rel="nofollow">Buttonset</A></LI>
+	<LI>Support for Form <A href="http://code.google.com/p/struts2-jquery/wiki/Validation" rel="nofollow">Validation</A></LI>
+	<LI>Support for new <A href="http://code.google.com/p/struts2-jquery/wiki/Button" rel="nofollow">jQuery UI  Button</A> Widget</LI>
+	<LI>Include all offical jQuery UI Themes</LI>
+	<LI>New Showcase Example how to handle JSON Results</LI>
+	<LI>New Showcase Example how to build accordion manually</LI>
+	<LI>New Showcase Examples for <A href="http://code.google.com/p/struts2-jquery/wiki/AutocompleterTag" rel="nofollow">Autocompleter</A></LI>
+	<LI>New Showcase Examples for AJAX Client Form <A href="http://code.google.com/p/struts2-jquery/wiki/Validation" rel="nofollow">Validation</A></LI>
+	<LI>Complete <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=102" rel="nofollow">&nbsp;Issue  102&nbsp;</A>: Enable Sonatype Nexus OSS repository deployment for Maven  central repository sync</LI>
+	<LI>Complete <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=104" rel="nofollow">&nbsp;Issue  104&nbsp;</A>: Move source to a Maven multi module setup</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=65" rel="nofollow">Issue  65</A>: Build accordion manually</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=80" rel="nofollow">Issue  80</A>: Add Size Parameter for select tag</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=84" rel="nofollow">Issue  84</A>: JavaScript<A href="http://code.google.com/p/struts2-jquery/w/edit/JavaScript" rel="nofollow">?</A> Error when parent form has no id</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=86" rel="nofollow">Issue  86</A>: onRowSelectTopcs only published when editurl is used</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=88" rel="nofollow">&nbsp;Issue  88&nbsp;</A>: &lt;s:url&gt; + formId in &lt;sj:div&gt; bug with first form  field</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=89" rel="nofollow">&nbsp;Issue  89&nbsp;</A>: &lt;sj:submit&gt; do not notify topics</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=90" rel="nofollow">&nbsp;Issue  90&nbsp;</A>: &lt;sj:submit&gt; with &quot;onBeforeTopics&quot; without ajax submit</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=95" rel="nofollow">Issue  95</A>: datepicker locale should use the struts current locale</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=97" rel="nofollow">Issue  97</A>: FormFilter<A href="http://code.google.com/p/struts2-jquery/w/edit/FormFilter" rel="nofollow">?</A> Attribute on <A href="http://code.google.com/p/struts2-jquery/wiki/SubmitTag" rel="nofollow">SubmitTag</A></LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=98" rel="nofollow">Issue  98</A>: onAlwaysTopics but in sj:submit and sj:a</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=106" rel="nofollow">Issue  106</A>: &quot;Multiple&quot; attribute in sj:select tag</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=107" rel="nofollow">Issue  107</A>: value attribute in select tag has no effect</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=108" rel="nofollow">Issue  108</A>: how to set #sjdialog with query string dynamically</LI>
+	<LI>Fix <A href="http://code.google.com/p/struts2-jquery/issues/detail?id=112" rel="nofollow">Issue  112</A>: add attributes for alternate rows in the grid tag</LI>
+</UL>
+
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

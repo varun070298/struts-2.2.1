@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/servlet-api-5.5.15.jar"/>
+	<classpathentry kind="lib" path="lib/xwork-2.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.test-2.5.6.A.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.context.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.core.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.web.jar"/>
+	<classpathentry kind="lib" path="lib/xwork-core-2.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.beans.jar"/>
+	<classpathentry kind="lib" path="lib/struts2-junit-plugin-2.1.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/struts-2.2.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/struts-2.2.1_src-plugins-junit-src-main-java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/struts-2.2.1_src-plugins-testng-src-main-java"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

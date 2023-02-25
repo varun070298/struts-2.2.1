@@ -1,0 +1,240 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>DataVision Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="DataVision Plugin">DataVision Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">DataVision Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=71096">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=71096">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=71096">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=71096">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=71096">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=71096">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=fzammetti">Frank W. Zammetti</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=schneidh@gmail.com">Tom Schneider</A> on Nov 17, 2007
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=71096&originalId=71103">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Name </TH>
+<TD class="confluenceTd"> DataVision Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Publisher </TH>
+<TD class="confluenceTd"> Frank W. Zammetti </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> License </TH>
+<TD class="confluenceTd"> Open Source (ASL2) </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TD class="confluenceTd"> 1.0 </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Compatibility </TH>
+<TD class="confluenceTd"> Struts 2.0.9&#43; </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Homepage </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2datavisionplugin/" rel="nofollow">http://code.google.com/p/struts2datavisionplugin/</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Download </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2datavisionplugin/downloads/list" rel="nofollow">http://code.google.com/p/struts2datavisionplugin/downloads/list</A> </TD>
+</TR>
+</TBODY></TABLE>
+
+<P><DIV id="rateDataVision">
+<DIV style="visibility:hidden; display:none;" id="rateDataVision.cookieName">rate-71096-43347</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('DataVision',document.Rate.rateURL+'&rateDir=dynamic&rateKey=DataVision&rateTitle=Rating&rating=0',false)" title="Display Results (3)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<P>This plugin provides support for DataVision, a popular open-source reporting package. Feedback is welcome!</P>
+
+<H2><A name="DataVisionPlugin-Overview"></A>Overview</H2>
+
+<P>This plugin provides a new Result type and package for Struts2 that allows you to easy integrate with DataVision. Configuration is very easy (nearly everything has an intelligent default, you could literally get away with only a single configuration parameter) yet flexible (there are multiple ways to configure all parameters). With DataVision in your Struts2 application, you can produce PDF, Excel, LaTeX, DocBook, comma-separated and other formatted output for display or download quickly and easily. </P>
+
+<P>DataVision (<A href="http://datavision.sourceforge.net/" rel="nofollow">http://datavision.sourceforge.net</A>) is an open source reporting tool similar to Crystal Reports. Reports can be designed using a drag-and-drop GUI. They may be run, viewed, and printed from the application or exported as HTML, XML, PDF, Excel, LaTeX2e, DocBook, or tab- or comma-delimited text files. The output files produced by LaTeX2e and DocBook can in turn be used to produce PDF, text, HTML, PostScript, and more. </P>
+
+<P>DataVision is written in Java and runs almost anywhere. It can generate reports from databases or text data files. Any database with an available JDBC driver should work: Oracle, PostgreSQL, MySQL, Informix, hsqldb, Microsoft Access, Progress, and more. Columns read from text files can be separated by any character. </P>
+
+<P>Report descriptions are stored as XML files. This means you can not only use the DataVision GUI but you may also edit reports using your favorite text editor. </P>
+
+<H2><A name="DataVisionPlugin-Features"></A>Features</H2>
+
+<UL>
+	<LI>Can be configured for output in many formats including PDF, delimited, Excel, DocBook and more</LI>
+	<LI>Report parameters can be passed to report template for dynamic generation</LI>
+	<LI>Reports can be written with the DataVision GUI, or by hand if you so choose</LI>
+</UL>
+
+
+<H2><A name="DataVisionPlugin-Usage"></A>Usage</H2>
+
+<P>The plug-in extends struts-default so you can extend the &quot;datavision-default&quot; package to use the new &quot;datavision&quot; result type.</P>
+
+<H2><A name="DataVisionPlugin-Example"></A>Example</H2>
+
+<P>Please download the sample application from the downloads page to see this in action. This application contains a number of different scenarios demonstrated.</P>
+
+<H2><A name="DataVisionPlugin-Installation"></A>Installation</H2>
+
+<P>This plug-in can be installed by copying the plug-in jar into your application's <TT>/WEB-INF/lib</TT> directory.  You will also need to add the DataVision dependencies:</P>
+
+<UL>
+	<LI>Bean Scripting Framework - bsf.jar - 2.4.0</LI>
+	<LI>iText PDF generator - iText.jar - 2.0.1</LI>
+	<LI>jRuby - jruby.jar - 0.9.8</LI>
+	<LI>Jakarta Commons Logging - commons-logging.jar - 1.1</LI>
+	<LI>POI (Jakarta MS Office/Excel API) - poi.jar - -3.0.alpha3.20061212</LI>
+</UL>
+
+
+<P>Note: versions shown here are the currently supported versions. Newer (or even older) versions may (and in most cases will) work just fine, but these are the known good versions).</P>
+
+<H2><A name="DataVisionPlugin-Resources"></A>Resources</H2>
+
+<UL>
+	<LI><A href="http://www.omnytex.com/articles/" rel="nofollow">Reporting For The Web With DataVision</A> - An article by Frank W. Zammetti intoducing DataVision and showing how it can be embedded in a webapp</LI>
+	<LI><A href="http://www.seriosoft.com/Blog/?p=156" rel="nofollow">Writing a Simple Report using Datavision</A> - A blog entry by Pete Williams giving an introduction to DataVision</LI>
+</UL>
+
+
+<H2><A name="DataVisionPlugin-VersionHistory"></A>Version History</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 1.0 </TD>
+<TD class="confluenceTd"> Sep 23, 2007 </TD>
+<TD class="confluenceTd"> fzammetti </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+</TBODY></TABLE>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

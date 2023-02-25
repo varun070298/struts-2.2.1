@@ -1,0 +1,306 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>GWT Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="GWT Plugin">GWT Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">GWT Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=34221">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=34221">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=34221">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=34221">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=34221">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=34221">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=mrdon">Don Brown</A> on Nov 14, 2007
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=34221&originalId=70761">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh">Name         </TH>
+<TD class="confluenceTd"> GWT Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Publisher    </TH>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A>, <A href="sean-mcrae.html" title="Sean McRae">Sean McRae</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">License      </TH>
+<TD class="confluenceTd"> Open Source (ASL2) </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Version      </TH>
+<TD class="confluenceTd"> 0.2 stable </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Compatibility</TH>
+<TD class="confluenceTd">Struts 2.0.2+ </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Homepage     </TH>
+<TD class="confluenceTd"> <A href="http://code.google.com/p/struts2gwtplugin/" rel="nofollow">http://code.google.com/p/struts2gwtplugin/</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh">Download     </TH>
+<TD class="confluenceTd">  <A href="http://code.google.com/p/struts2gwtplugin/downloads/list" rel="nofollow">http://code.google.com/p/struts2gwtplugin/downloads/list</A> </TD>
+</TR>
+</TBODY></TABLE>
+
+<P><DIV id="rate34221">
+<DIV style="visibility:hidden; display:none;" id="rate34221.cookieName">rate-34221-30847</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('34221',document.Rate.rateURL+'&rateDir=dynamic&rateKey=34221&rateTitle=Rating&rating=0',false)" title="Display Results (14)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<P>This plugin can be used to call methods on Struts actions using Google Web Toolkit (GWT).</P>
+
+<H2><A name="GWTPlugin-Example"></A>Example</H2>
+
+<H3><A name="GWTPlugin-SetupAction"></A>Setup Action</H3>
+
+<P>Start by creating an action that contains the method that is going to be called. This method needs to match the signature of the service interface, but you don't need to implement the interface on the action.  This method will be different from regular Struts 2 action methods in that it returns any object (that GWT can serialize), instead of a result name. If you want to call regular actions from GWT (not using GWT's RPC) go <A href="../WW/struts-2-gwt.html" rel="nofollow">here</A></P>
+
+<P>In this example the action &quot;Hello&quot; will return the string passed to it. Remember, <B>the returned object is not the regular Struts result</B>, it is the object that you will receive on the client side. </P>
+
+<P>Example:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+public class Hello {
+    public String hello(String text) {
+        return text;
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<H3><A name="GWTPlugin-Writethemappingfortheaction"></A>Write the mapping for the action</H3>
+<P>For any action mapping that is going to be called from GWT:</P>
+<OL>
+	<LI>Add the map inside a package that extends &quot;gwt-default&quot;</LI>
+	<LI>Add the &quot;gwt&quot; interceptor to the mapping</LI>
+</OL>
+
+
+<P>Example:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd"&gt;
+
+&lt;struts&gt;
+
+  &lt;constant name="struts.enable.DynamicMethodInvocation" value="false" /&gt;
+  &lt;constant name="struts.devMode" value="true" /&gt;
+
+  &lt;package name="example"  extends="gwt-default"&gt;
+     &lt;action name="Hello" class="example.Hello" method="hello"&gt;
+        &lt;interceptor-ref name="gwt"/&gt;
+     &lt;/action&gt;
+  &lt;/package&gt;
+
+&lt;/struts&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<H4><A name="GWTPlugin-GWTclasses"></A>GWT classes</H4>
+
+<P>Write the required service interface as described <A href="http://code.google.com/webtoolkit/documentation/com.google.gwt.doc.DeveloperGuide.RemoteProcedureCalls.MakingACall.html" rel="nofollow">here</A>. This is regular GWT stuff.</P>
+
+<P>As an example of the interface:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+public interface MyService extends RemoteService {
+    public String hello(String s);
+}
+
+public interface MyServiceAsync {
+    public void hello(String s, AsyncCallback callback);
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>And to call it:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+MyServiceAsync service = (MyServiceAsync) GWT.create(MyService.class);
+AsyncCallback callback = new AsyncCallback() {
+    public void onSuccess(Object result) {
+        Window.alert(result.toString());
+    }
+
+    public void onFailure(Throwable caught) {
+        Window.alert(caught.toString());
+    }
+};
+ServiceDefTarget endpoint = (ServiceDefTarget) service;
+endpoint.setServiceEntryPoint("Hello.action");
+service.hello("Hi There!", callback);
+]]></SCRIPT>
+</DIV></DIV>
+
+<H2><A name="GWTPlugin-Installation"></A>Installation</H2>
+
+<P>This plugin can be installed by copying the plugin jar and gwt-servlet.jar (from GWT) into your application's <TT>/WEB-INF/lib</TT> directory.  No other files need to be copied or created.</P>
+
+<H2><A name="GWTPlugin-Resources"></A>Resources</H2>
+
+<P><IMG class="emoticon" src="http://cwiki.apache.org/confluence/images/icons/emoticons/lightbulb_on.gif" height="16" width="16" align="absmiddle" alt="" border="0"> <A href="gwt-plugin-tutorial.html" title="GWT Plugin Tutorial">Struts + GWT without the GWT plugin</A></P>
+
+<H2><A name="GWTPlugin-VersionHistory"></A>Version History</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1 </TD>
+<TD class="confluenceTd"> Jul 2, 2007 </TD>
+<TD class="confluenceTd"> <A href="sean-mcrae.html" title="Sean McRae">Sean McRae</A> </TD>
+<TD class="confluenceTd"> Updated plugin to work with the updated GWT 1.4 RPC mechanism. Add README file </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1 </TD>
+<TD class="confluenceTd"> Jan 10, 2007 </TD>
+<TD class="confluenceTd"> <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+</TBODY></TABLE>
+
+        </DIV>
+
+                  <DIV class="tabletitle">
+            Children
+            <SPAN class="smalltext" id="show" style="display: inline;">
+              <A href="javascript:showChildren()">Show Children</A></SPAN>
+            <SPAN class="smalltext" id="hide" style="display: none;">
+              <A href="javascript:hideChildren()">Hide Children</A></SPAN>
+          </DIV>
+          <DIV class="greybox" id="children" style="display: none;">
+                                      <A href="gwt-plugin-tutorial.html" title="GWT Plugin Tutorial">GWT Plugin Tutorial</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="sean-mcrae.html" title="Sean McRae">Sean McRae</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                      </DIV>
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

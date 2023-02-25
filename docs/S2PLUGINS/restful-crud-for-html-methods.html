@@ -1,0 +1,290 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>RESTful CRUD for HTML methods</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="rest-plugin.html" title="REST Plugin">REST Plugin</A>&nbsp;&gt;&nbsp;<A href="" title="RESTful CRUD for HTML methods">RESTful CRUD for HTML methods</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">RESTful CRUD for HTML methods</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=69269">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=69269">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=69269">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=69269">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=69269">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=69269">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="../~husted/index.html">Ted Husted</A>, last edited by <A href="../~husted/index.html">Ted Husted</A> on Oct 23, 2007
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=69269&originalId=69305">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <H2><A name="RESTfulCRUDforHTMLmethods-HeuristicMethodMatching"></A>Heuristic Method Matching</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Action </TH>
+<TH class="confluenceTh"> SQL     </TH>
+<TH class="confluenceTh"> REST Verb </TH>
+<TH class="confluenceTh"> HTML Method </TH>
+<TH class="confluenceTh"> URI        </TH>
+<TH class="confluenceTh"> Invokes          </TH>
+<TH class="confluenceTh"> Parameters </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> Create  </TD>
+<TD class="confluenceTd"> Insert   </TD>
+<TD class="confluenceTd"> PUT        </TD>
+<TD class="confluenceTd">  POST   </TD>
+<TD class="confluenceTd"> /my-resource     </TD>
+<TD class="confluenceTd"> MyResource.create </TD>
+<TD class="confluenceTd"> ...     </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Read    </TD>
+<TD class="confluenceTd"> Select   </TD>
+<TD class="confluenceTd"> GET        </TD>
+<TD class="confluenceTd">  GET    </TD>
+<TD class="confluenceTd"> /my-resource/-id </TD>
+<TD class="confluenceTd"> MyResource.read   </TD>
+<TD class="confluenceTd"> ...     </TD>
+<TD class="confluenceTd"> aka FindbyId </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Update  </TD>
+<TD class="confluenceTd"> Update   </TD>
+<TD class="confluenceTd"> POST       </TD>
+<TD class="confluenceTd">  POST   </TD>
+<TD class="confluenceTd"> /my-resource/-id </TD>
+<TD class="confluenceTd"> MyResource.update </TD>
+<TD class="confluenceTd"> id=&quot;id&quot;, ... </TD>
+<TD class="confluenceTd"> with one or more POST attributes </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Delete  </TD>
+<TD class="confluenceTd"> Delete   </TD>
+<TD class="confluenceTd"> DELETE     </TD>
+<TD class="confluenceTd">  POST   </TD>
+<TD class="confluenceTd"> /my-resource/-id </TD>
+<TD class="confluenceTd"> MyResource.delete </TD>
+<TD class="confluenceTd"> id=&quot;id&quot; </TD>
+<TD class="confluenceTd"> with zero POST attributes (or single delete attribute )</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Welcome </TD>
+<TD class="confluenceTd"> Describe </TD>
+<TD class="confluenceTd"> n/a        </TD>
+<TD class="confluenceTd">  GET    </TD>
+<TD class="confluenceTd"> /my-resource     </TD>
+<TD class="confluenceTd"> MyResource.index  </TD>
+<TD class="confluenceTd"> ...     </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Input for Create </TD>
+<TD class="confluenceTd"> n/a </TD>
+<TD class="confluenceTd"> n/a    </TD>
+<TD class="confluenceTd">  GET    </TD>
+<TD class="confluenceTd"> /my-resource-input </TD>
+<TD class="confluenceTd"> MyResource.input </TD>
+<TD class="confluenceTd"> ... </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Input for Update </TD>
+<TD class="confluenceTd"> n/a </TD>
+<TD class="confluenceTd"> n/a    </TD>
+<TD class="confluenceTd">  GET    </TD>
+<TD class="confluenceTd"> /my-resource-input/-id </TD>
+<TD class="confluenceTd"> MyResource.input </TD>
+<TD class="confluenceTd"> id=&quot;id&quot;, ... </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Other State Read   </TD>
+<TD class="confluenceTd"> n/a </TD>
+<TD class="confluenceTd"> n/a  </TD>
+<TD class="confluenceTd">  GET    </TD>
+<TD class="confluenceTd"> /my-resource-other(/-id) </TD>
+<TD class="confluenceTd"> MyResource.other </TD>
+<TD class="confluenceTd"> ... </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> Other State Change </TD>
+<TD class="confluenceTd"> n/a </TD>
+<TD class="confluenceTd"> n/a  </TD>
+<TD class="confluenceTd">  POST   </TD>
+<TD class="confluenceTd"> /my-resource-other(/-id) </TD>
+<TD class="confluenceTd"> MyResource.other </TD>
+<TD class="confluenceTd"> ... </TD>
+<TD class="confluenceTd">&nbsp;</TD>
+</TR>
+</TBODY></TABLE>
+
+<P>Key </P>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TD class="confluenceTd"> &quot;...&quot; </TD>
+<TD class="confluenceTd"> indicates that there may be other attributes passed through the POST or GET request </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> &quot;-id&quot; </TD>
+<TD class="confluenceTd"> is the <TT>action.name.separator</TT> followed by the value of the primary identifier for the resource (<TT>/album/-Thriller</TT>) </TD>
+</TR>
+</TBODY></TABLE>
+
+<P>Not shown is the possibility that other attribute name/value pairs may follow the /&#45;id/ field or a blank /&#45;/ field. </P>
+
+<UL>
+	<LI><TT>POST /inventory/album/-/id/Thriller/artist/Michael Jackson/genre/pop</TT></LI>
+	<LI><TT>GET  /inventory/album/-Thriller</TT></LI>
+	<LI><TT>POST /inventory/album/-Thriller/released/1984-12-01</TT></LI>
+	<LI><TT>POST /inventory/album/-Thriller</TT></LI>
+</UL>
+
+
+<P>Note that whether PUT maps to create or update varies by source.  </P>
+
+<H2><A name="RESTfulCRUDforHTMLmethods-HeuristicResultMatching"></A>Heuristic Result Matching</H2>
+
+<OL>
+	<LI>(on &quot;success&quot;) my-resource-$method (e.g., -create, -read, -update, -delete, -index, -input, -other)</LI>
+	<LI>my-resource-$result-code (e.g., &quot;success&quot;, &quot;cancel&quot;, &quot;input&quot;, &quot;error&quot;)</LI>
+	<LI>$result-code</LI>
+	<LI>my-resource</LI>
+</OL>
+
+
+<P>An &quot;extension&quot; to result matching would be to map default result-type to suffixes added to result codes. For example, a result code like &quot;success.ftl&quot; would utilize the FreeMarker result. </P>
+
+<H2><A name="RESTfulCRUDforHTMLmethods-HeuristicActionMatching"></A>Heuristic Action Matching</H2>
+
+<OL>
+	<LI>MyResource</LI>
+	<LI>MyResourceAction</LI>
+	<LI>My.resource</LI>
+	<LI>MyAction.resource</LI>
+	<LI>my-resource/Index</LI>
+	<LI>or the package default (ActionSupport)</LI>
+</OL>
+
+
+<H2><A name="RESTfulCRUDforHTMLmethods-Settings"></A>Settings </H2>
+
+<UL>
+	<LI>base.action.packages (action)</LI>
+	<LI>base.result.location (/WEB-INF/result)</LI>
+	<LI>create.method (create), read.method (read), update.method (update), delete.method (delete), welcome.method (index)</LI>
+	<LI>action.name.separator (&#45;)</LI>
+</UL>
+
+
+<H2><A name="RESTfulCRUDforHTMLmethods-Resources"></A>Resources </H2>
+
+<UL>
+	<LI><A href="http://java.sun.com/developer/technicalArticles/WebServices/restful/" rel="nofollow">RESTful Web Services (for Java)</A></LI>
+	<LI><A href="http://en.wikipedia.org/wiki/Representational_State_Transfer" rel="nofollow">Wikipedia - Representatonal State Transfer</A></LI>
+</UL>
+
+
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

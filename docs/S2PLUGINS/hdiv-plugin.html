@@ -1,0 +1,472 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>HDIV Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="HDIV Plugin">HDIV Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">HDIV Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=60135">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=60135">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=60135">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=60135">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=60135">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=60135">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=gorka">Gorka Vicente</A>, last edited by <A href="http://cwiki.apache.org/confluence/display/~martinc/Index">Martin Cooper</A> on Mar 01, 2010
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=60135&originalId=14811324">view change</A>)
+                      <SPAN id="show" class="inline-control-link"><A href="" onclick="showComment(); return false;">show comment</A></SPAN>
+        <SPAN id="hide" class="inline-control-link" style="display:none;"><A href="" onclick="hideComment(); return false;">hide comment</A></SPAN>
+          <DIV id="versionComment" class="noteMacro" style="display:none; padding: 5px;">
+      <B>Comment:</B>
+      Reverted from v. 14<BR>
+  </DIV>
+
+    <SCRIPT>
+      var show = document.getElementById('show');
+      var hide = document.getElementById('hide');
+      var versionComment = document.getElementById('versionComment');
+
+      function showComment(){
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+        versionComment.style.display = 'block';
+      }
+
+      function hideComment(){
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+        versionComment.style.display = 'none';
+      }
+
+    </SCRIPT>
+    
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Name </TH>
+<TD class="confluenceTd"> HDIV Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Publisher </TH>
+<TD class="confluenceTd"> hdiv.org </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> License </TH>
+<TD class="confluenceTd"> Open Source (ASL2) </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TD class="confluenceTd"> 2.0.4 </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Compatibility </TH>
+<TD class="confluenceTd"> Struts 2.0.6&#43;</TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Homepage </TH>
+<TD class="confluenceTd"> <A href="http://www.hdiv.org/" rel="nofollow">http://www.hdiv.org</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Download </TH>
+<TD class="confluenceTd"> <A href="http://sourceforge.net/project/showfiles.php?group_id=139104" rel="nofollow">http://sourceforge.net/project/showfiles.php?group_id=139104</A> </TD>
+</TR>
+</TBODY></TABLE>
+
+<P><DIV id="rate60135">
+<DIV style="visibility:hidden; display:none;" id="rate60135.cookieName">rate-60135-17599</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('60135',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60135&rateTitle=Rating&rating=0',false)" title="Display Results (22)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<H2><A name="HDIVPlugin-Overview%26nbsp%3B"></A>Overview&nbsp;</H2>
+<P>HDIV plugin integrates <A href="http://www.hdiv.org/" rel="nofollow">HDIV (HTTP Data Integrity Validator)</A> with Struts 2 adding Security functionalities: <B>Integrity</B>, <B>Confidentiality of non editable data</B> and <B>Generic Validations of the Editable Data</B>.</P>
+
+<H2><A name="HDIVPlugin-Features%26nbsp%3B"></A>Features&nbsp;</H2>
+
+<UL>
+	<LI><B>INTEGRITY:</B> HDIV guarantees integrity (no data modification) of all the data generated by the server which should not be modified by the client (links, hidden fields, combo values, radio buttons, destiny pages, etc.). Thanks to this property HDIV helps to eliminate most of the vulnerabilities based on the parameter tampering.</LI>
+</UL>
+
+
+<UL>
+	<LI><B>EDITABLE DATA VALIDATION:</B> HDIV eliminates to a large extent the risk originated by attacks of type Cross-site scripting (XSS) and SQL Injection using generic validations of the editable data (text and textarea).</LI>
+</UL>
+
+
+<UL>
+	<LI><B>CONFIDENTIALITY:</B> HDIV guarantees the confidentiality of the non editable data as well. Usually lots of the data sent to the client has key information for the attackers such as database registry identifiers, column or table names, web directories, etc. All these values are hidden by HDIV to avoid a malicious use of them. For example a link of this type, <FONT color="#003399"><EM><A href="http://www.host.com/?data1=12&data2=24" rel="nofollow">http://www.host.com?data1=12&amp;data2=24</A></EM></FONT> is replaced by <FONT color="#003399"><EM><A href="http://www.host.com/?data1=0&data2=1" rel="nofollow">http://www.host.com?data1=0&amp;data2=1</A></EM></FONT>, guaranteeing confidentiality of the values representing database identifiers.&nbsp;</LI>
+</UL>
+
+
+<H2><A name="HDIVPlugin-GettingStarted"></A>Getting Started</H2>
+
+<P>These are the steps to follow to install and configurate HDIV in a web application. For background information on the core HDIV concepts, visit <A href="http://www.hdiv.org/docs/hdiv-reference.pdf" rel="nofollow">HDIV's Reference</A></P>
+
+<H3><A name="HDIVPlugin-Requirements"></A>Requirements</H3>
+
+<UL>
+	<LI>Spring 2.x</LI>
+	<LI>Struts 2.0.6&#43;</LI>
+	<LI>Commons Codec 1.3&#43;</LI>
+	<LI>Commons FileUpload 1.1.1&#43;</LI>
+	<LI>Commons io 1.1&#43;</LI>
+</UL>
+
+
+<H3><A name="HDIVPlugin-Installation"></A>Installation</H3>
+
+
+<H4><A name="HDIVPlugin-Step1Libraries"></A>Step 1 - Libraries</H4>
+
+<UL>
+	<LI>&nbsp;Include the following libraries in the web application classpath:
+	<UL>
+		<LI>hdiv-core-2.0.4.jar</LI>
+		<LI>hdiv-struts-2.0.x-2.0.4.jar</LI>
+		<LI>Spring library</LI>
+		<LI>Commons Codec library</LI>
+		<LI>Commons Fileupload library</LI>
+		<LI>Commons IO library</LI>
+	</UL>
+	</LI>
+</UL>
+
+
+<UL>
+	<LI>&nbsp;Tag library: the Struts 2.x tag library comes bundled in hdiv-struts-2.0.x.jar. The library descriptor is called hdiv-tags.tld. To use the tags from this library, add the following directive to the top of your JSP page:
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;%@ taglib prefix="form" uri="http://www.hdiv.org/struts2/tags" %&gt;
+]]></SCRIPT>
+</DIV></DIV></LI>
+</UL>
+
+
+<H4><A name="HDIVPlugin-Step2web.xml"></A>Step 2 - web.xml</H4>
+
+<UL>
+	<LI>Spring configuration file location.
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;context-param&gt;
+   &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+   &lt;param-value&gt;/WEB-INF/applicationContext.xml,/WEB-INF/hdiv-config.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<P>&nbsp;If validations for editable data have been defined, add <EM>hdiv-validations.xml</EM> as well.</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;context-param&gt;
+   &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+   &lt;param-value&gt;/WEB-INF/applicationContext.xml,/WEB-INF/hdiv-config.xml,/WEB-INF/hdiv-validations.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+]]></SCRIPT>
+</DIV></DIV></LI>
+	<LI>Add HDIV and Spring initialization listeners:
+	<UL>
+		<LI>Spring listener:
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;listener&gt;
+   &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+]]></SCRIPT>
+</DIV></DIV></LI>
+		<LI>HDIV listener:
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;listener&gt;
+   &lt;listener-class&gt;org.hdiv.listener.InitListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+]]></SCRIPT>
+</DIV></DIV></LI>
+	</UL>
+	</LI>
+</UL>
+
+
+<UL>
+	<LI>Validation Filter: define HDIV's validation filter for the extensions of all posible actions and for the JSP pages. It is important to define the HDIV filter before the struts2 filter and the org.apache.struts2.dispatcher.FilterDispatcher class in order to guarantee that it is executed before any Struts2 operation.
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;filter&gt;
+   &lt;filter-name&gt;ValidatorFilter&lt;/filter-name&gt;
+   &lt;filter-class&gt;org.hdiv.filter.ValidatorFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+
+&lt;filter-mapping&gt;
+   &lt;filter-name&gt;ValidatorFilter&lt;/filter-name&gt;
+   &lt;url-pattern&gt;*.action&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+
+&lt;filter-mapping&gt;
+   &lt;filter-name&gt;ValidatorFilter&lt;/filter-name&gt;
+   &lt;url-pattern&gt;*.jsp&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<DIV class="panelMacro"><TABLE class="noteMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/warning.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>Be Careful</B><BR>The extension defined by default is &quot;.action&quot;. If there are extra extensions added in the <EM>struts.properties</EM> file, they must be added in the <EM>ValidatorFilter</EM> as well. Suppose that we modify the <EM>struts.properties</EM> file to accept the &quot;.do&quot; extension:
+<DIV class="code panel" style="background-color: #FFFFF0;border-width: 1px;"><DIV class="codeContent panelContent" style="background-color: #FFFFF0;">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+struts.action.extension=action,do
+]]></SCRIPT>
+</DIV></DIV>
+<P>So we modify the web.xml file adding the following value</P>
+<DIV class="code panel" style="background-color: #FFFFF0;border-width: 1px;"><DIV class="codeContent panelContent" style="background-color: #FFFFF0;">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;filter-mapping&gt;
+   &lt;filter-name&gt;ValidatorFilter&lt;/filter-name&gt;
+   &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+]]></SCRIPT>
+</DIV></DIV></TD></TR></TABLE></DIV></LI>
+</UL>
+
+
+<UL>
+	<LI>Struts 2 Filter: add the config init parameter to the Struts 2 filter with the following value:
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;filter&gt;
+   &lt;filter-name&gt;struts2&lt;/filter-name&gt;
+   &lt;filter-class&gt;org.apache.struts2.dispatcher.FilterDispatcher&lt;/filter-class&gt;
+   &lt;init-param&gt;
+      &lt;param-name&gt;config&lt;/param-name&gt;
+      &lt;param-value&gt;hdiv-default.xml,struts-plugin.xml,struts.xml&lt;/param-value&gt;
+   &lt;/init-param&gt;
+&lt;/filter&gt;
+]]></SCRIPT>
+</DIV></DIV></LI>
+</UL>
+
+
+<H4><A name="HDIVPlugin-Step3Spring"></A>Step 3 - Spring</H4>
+
+<P>Add <EM>applicationContext.xml</EM> and <EM>hdiv-config.xml</EM> files in the WEB-INF directory of the web application. If validations for editable data have been defined, add the <EM>hdiv-validations.xml</EM> as well.
+<BR clear="all"></P>
+
+<H3><A name="HDIVPlugin-Configuration"></A>Configuration</H3>
+
+
+<H4><A name="HDIVPlugin-hdivconfig.xml"></A>hdiv-config.xml</H4>
+
+<UL>
+	<LI>Init Parameters: Configurable parameters for the user to initialize HDIV in the <EM>config</EM> bean.
+	<UL>
+		<LI>Error page: define JSP file path (without context path name) where the request will be redirect to when it does not pass validation.
+<DIV class="panelMacro"><TABLE class="tipMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>error page example</B><BR><DIV class="code panel" style="background-color: #F3FFF3;border-width: 1px;"><DIV class="codeContent panelContent" style="background-color: #F3FFF3;">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;property name="errorPage"&gt;
+   &lt;value&gt; /error.jsp&lt;/value&gt;
+&lt;/property&gt;
+]]></SCRIPT>
+</DIV></DIV></TD></TR></TABLE></DIV></LI>
+		<LI>Start pages: by default HDIV only accept requests to actions that have been sent to the client before (within html code). If you try to access an action directly (writing in the browser) you will be redirected to the error page. All web aplications have a start page or home page that a client has to access directly. This pages are known as startPages in HDIV and you must declare them within startPages init-param (without context path name).
+<DIV class="panelMacro"><TABLE class="tipMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>start page example</B><BR>if your web application home page url is <A href="http://www.host.com/webapp-name?home.action" rel="nofollow">http://www.host.com/webapp-name?home.action</A>, you have to declare &quot;home&quot; parameter on the value:
+<DIV class="code panel" style="background-color: #F3FFF3;border-width: 1px;"><DIV class="codeContent panelContent" style="background-color: #F3FFF3;">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;property name="userStartPages"&gt;
+   &lt;list&gt;
+      &lt;value&gt;/home.action&lt;/value&gt;
+   &lt;/list&gt;
+&lt;/property&gt;
+]]></SCRIPT>
+</DIV></DIV></TD></TR></TABLE></DIV></LI>
+	</UL>
+	</LI>
+</UL>
+
+
+<H4><A name="HDIVPlugin-strutsplugin.xml"></A>struts-plugin.xml</H4>
+
+<P>This file is distributed in the HDIV's hdiv-struts-2.0.x-2.0.4.jar library, therefore, including the library in the web application classpath, HDIV's new classes to use by the Struts2 core, the new library for Velocity and Freemarker and a new interceptor for the validation of editable data will be configured.</P>
+
+<P>Result Types <EM>redirect</EM> and <EM>redirect-action</EM> defined by default in <EM>struts-default.xml</EM> have been overwritten in <EM>struts-plugin.xml</EM>, in case we use these type of results (<EM>redirect</EM>, <EM>redirect-action</EM>) by dependency injection. For example:</P>
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+@Result(name="list", value="listPeople.action", type=ServletRedirectResult.class)
+public class EditPersonAction extends ActionSupport {
+
+}
+]]></SCRIPT>
+</DIV></DIV>
+<P>We must modify the class defined in the type attribute and declare the following types depending on the result type we want to use:</P>
+<UL>
+	<LI>redirect: type=HDIVServletRedirectResult.class</LI>
+	<LI>redirect-action: type=HDIVServletActionRedirectResult.class
+<BR clear="all">
+<BR clear="all">
+<DIV class="panelMacro"><TABLE class="infoMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>Configuration</B><BR>For more information about HDIV's configuration you can read <A href="http://www.hdiv.org/docs/hdiv-reference.pdf" rel="nofollow">HDIV's Reference (<EM>chapter 7.2</EM>)</A></TD></TR></TABLE></DIV></LI>
+</UL>
+
+
+<H2><A name="HDIVPlugin-Example"></A>Example</H2>
+
+<P>There is an example to show how HDIV works. These are the steps to follow to install application:</P>
+<OL>
+	<LI>Download <EM>showcase</EM> application from Sourceforge: <A href="http://sourceforge.net/project/showfiles.php?group_id=139104" rel="nofollow">http://sourceforge.net/project/showfiles.php?group_id=139104</A></LI>
+	<LI>Deploy <EM>showcase</EM> application in our web server.</LI>
+	<LI>Start up the web server.</LI>
+	<LI>Execute <EM>showcase</EM> init URL. We must know the domain and the port where the web server is running: http://&lt;domain:port&gt;/struts2-showcase-2.0.x/
+<DIV class="panelMacro"><TABLE class="infoMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B>More information about showcase web application</B><BR>You can get more details about configuration in the <A href="http://www.hdiv.org/docs/hdiv-reference.pdf" rel="nofollow">HDIV's Reference (<EM>chapter 8.2</EM>)</A></TD></TR></TABLE></DIV></LI>
+</OL>
+
+
+<H2><A name="HDIVPlugin-VersionHistory"></A>Version History</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 2.0.4 </TD>
+<TD class="confluenceTd"> Mar 11, 2008 </TD>
+<TD class="confluenceTd"> hdiv.org </TD>
+<TD class="confluenceTd"> Support for Struts 2.0.11 and Anti-CSRF token </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 2.0.3 </TD>
+<TD class="confluenceTd"> Jan 14, 2008 </TD>
+<TD class="confluenceTd"> hdiv.org </TD>
+<TD class="confluenceTd"> Support for Spring 2.5 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 2.0.1 </TD>
+<TD class="confluenceTd"> Nov 14, 2007 </TD>
+<TD class="confluenceTd"> hdiv.org </TD>
+<TD class="confluenceTd"> Modified behaviour of file upload handler </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 2.0 </TD>
+<TD class="confluenceTd"> Sep 13, 2007 </TD>
+<TD class="confluenceTd"> hdiv.org </TD>
+<TD class="confluenceTd"> Support for Struts 2.0.9 </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 1.3 </TD>
+<TD class="confluenceTd"> June 20, 2007 </TD>
+<TD class="confluenceTd"> hdiv.org </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+</TBODY></TABLE>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

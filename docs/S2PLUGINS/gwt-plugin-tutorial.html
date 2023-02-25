@@ -1,0 +1,378 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>GWT Plugin Tutorial</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="gwt-plugin.html" title="GWT Plugin">GWT Plugin</A>&nbsp;&gt;&nbsp;<A href="" title="GWT Plugin Tutorial">GWT Plugin Tutorial</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">GWT Plugin Tutorial</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=34463">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=34463">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=34463">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=34463">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=34463">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=34463">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="../~husted/index.html">Ted Husted</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=musachy">Musachy Barroso</A> on Feb 03, 2007
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=34463&originalId=44093">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <P>This tutorial will demonstrate how to call an Struts 2 action, using GWT to submit a form and use the returned data, without using the GWT plugin. <B>The recommended way of integrating GWT with Struts 2 is using the <A href="gwt-plugin.html" rel="nofollow">GWT Plugin</A></B></P>
+
+<P>To use this tutorial you will need the Struts 2 <A href="json-plugin.html" rel="nofollow">JSON Plugin</A> installed.</P>
+
+<H3><A name="GWTPluginTutorial-Writeyouraction."></A>Write your action.</H3>
+<P>Example action:</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>&quot;Hello.java&quot;</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package example;
+
+import com.opensymphony.xwork2.Action;
+
+public class Hello {
+    private String firstName;
+    private String lastName;
+
+    public String execute() {
+        return Action.SUCCESS;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+
+<H3><A name="GWTPluginTutorial-Writethemappingforyouraction."></A>Write the mapping for your action.</H3>
+<P>In this example the mapping is in struts.xml:</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>struts.xml</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd"&gt;
+
+&lt;struts&gt;
+
+  &lt;package name="example"  extends="json-default"&gt;
+    &lt;action name="Hello" class="example.Hello"&gt;
+      &lt;result type="json" /&gt;
+    &lt;/action&gt;
+
+    &lt;action name="Main" class="com.opensymphony.xwork2.ActionSupport"&gt;
+      &lt;result&gt;org.apache.struts.gwt.Main/Main.jsp&lt;/result&gt;
+    &lt;/action&gt;
+  &lt;/package&gt;
+
+&lt;/struts&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>The &quot;Hello&quot; action  has a result of type &quot;json&quot;, which will serialize the action object into a <A href="http://www.json.org/" rel="nofollow">JSON</A> string. If &quot;firstName&quot; is set to &quot;John&quot; and &quot;lastName&quot; is set to &quot;Galt&quot;, the output of the &quot;Hello&quot; action will be:</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+{
+   "firstName" : "John",
+   "lastName"  : "Galt"
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>The &quot;Main&quot; action points to the &quot;Main.jsp&quot; page which is the page that uses GWT. The path of the result is &quot;org.apache.struts.gwt.Main/Main.jsp&quot;. That means that the files generated by GWT must go under a folder named &quot;org.apache.struts.gwt.Main&quot; under the root of your application. See &quot;Deployment structure&quot; for more details.</P>
+
+
+<H3><A name="GWTPluginTutorial-Write%22Main.jsp%22page."></A>Write &quot;Main.jsp&quot; page.</H3>
+<P>This is the page that is generated by GWT's &quot;applicationCreator&quot;. It has been renamed to .jsp because we have modified it to be a jsp page, instead of a plain html page.</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>Main.jsp</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: html; gutter: false"><![CDATA[
+&lt;%@ taglib prefix="s" uri="/struts-tags" %&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;s:head theme="ajax" debug="true"/&gt;
+    &lt;meta name='gwt:module' content='org.apache.struts.gwt.Main/org.apache.struts.gwt.Main'&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;script language="javascript" src="${pageContext.request.contextPath}/org.apache.struts.gwt.Main/gwt.js"/&gt;
+
+      &lt;form id="form1"&gt;
+         &lt;input type="text" name="firstName"&gt;
+          &lt;br/&gt;
+          &lt;input type="text" name="lastName"&gt;
+          &lt;span id="slot1"&gt;&lt;/span&gt;
+       &lt;/form&gt;
+
+       &lt;br/&gt;
+       &lt;span id="slot2"&gt;&lt;/span&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>We set head's tag attribute &quot;theme&quot; to ajax to use Dojo, don't panic, you won't have to use it directly. <B>Note</B> that we have changed a few things from the original html page generated by GWT, we set &quot;content&quot; to &quot;org.apache.struts.gwt.Main/org.apache.struts.gwt.Main&quot; because the GWT generated files will be under &quot;AppRoot/org.apache.struts.gwt.Main&quot; instead of beneath root, and we set &quot;src&quot; to &quot;${pageContext.request.contextPath}/org.apache.struts.gwt.Main/gwt.js&quot; for the same reason. Without these two changes the GWT files wouldn't be loaded.</P>
+
+<H3><A name="GWTPluginTutorial-Struts2GWTHelper"></A>Struts2GWTHelper</H3>
+<P>This class will take care of making the request. Why? Why do I need this class? Couple of reasons, first, there is a <A href="http://code.google.com/p/google-web-toolkit/issues/detail?id=580&can=2&q=asyncPost" rel="nofollow">bug</A> on HTTPRequest.asyncPost which doesn't encode the payload properly, second, if you want to submit a form, you have to encode it yourself, and this class will help you do that. Optionally you can download a jar containing this class (with more methods) from <A href="http://code.google.com/p/struts2gwt/downloads/list" rel="nofollow">here</A>, and add this to your GWT application file (i.e Main.gwt.xml):</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;inherits name='struts2gwt.Struts2GWT'/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>and add the jar to the classpath in your compile script (i.e Main-compile.cmd) and the compile script (i.e Main-shell.cmd).</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>Struts2GWTHelper .java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package org.apache.struts.gwt.client;
+
+import com.google.gwt.user.client.ResponseTextHandler;
+
+public class Struts2GWTHelper {
+
+    /**
+     * Make asynchronous post
+     * @param url Action url
+     * @param formId id of form that will be posted
+     * @param handler callback function
+     */
+    public static native void asyncPost(String url, String formId, ResponseTextHandler handler) /*-{
+        dojo = $wnd.dojo;
+        //don't use the dojo.io.bind({...}) shortcut, it doesn't work here
+        var request = new dojo.io.Request(url);
+        request.load = function(type, data, request) {
+            handler.@com.google.gwt.user.client.ResponseTextHandler::onCompletion(Ljava/lang/String;)(data);
+        };
+        request.formNode = dojo.byId(formId);
+        request.method = "POST";
+        $wnd.dojo.io.bind(request);
+    }-*/;
+
+    /**
+     * Make asynchronous post
+     * @param url Action url
+     * @param handler callback function
+     */
+    public static void asyncPost(String url, ResponseTextHandler handler) {
+        Struts2GWTHelper.asyncPost(url, handler);
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>See? It wasn't that bad.</P>
+
+<H3><A name="GWTPluginTutorial-WriteyourGWTentrypoint"></A>Write your GWT entry point</H3>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>Main.java</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+package org.apache.struts.gwt.client;
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONParser;
+import com.google.gwt.json.client.JSONString;
+import com.google.gwt.user.client.ResponseTextHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.ClickListener;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+/**
+ * Entry point classes define &lt;code&gt;onModuleLoad()&lt;/code&gt;.
+ */
+public class Main implements EntryPoint {
+    final Label label = new Label();
+
+    /**
+     * This is the entry point method.
+     */
+    public void onModuleLoad() {
+        final Button button = new Button("Click me");
+
+        button.addClickListener(new ClickListener() {
+            public void onClick(Widget sender) {
+                makeRequest();
+            }
+        });
+
+        RootPanel.get("slot1").add(button);
+        RootPanel.get("slot2").add(label);
+    }
+
+    private void makeRequest() {
+        Struts2GWTHelper.asyncPost("Hello.action", "form1", new ResponseTextHandler() {
+            public void onCompletion(String responseText) {
+                JSONObject obj = (JSONObject)JSONParser.parse(responseText);
+                JSONString firstName = (JSONString)obj.get("firstName");
+                JSONString lastName = (JSONString)obj.get("lastName");
+                label.setText("Welcome " + firstName.stringValue() + " " + lastName.stringValue());
+            }
+        });
+    }
+}
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>The makeRequest() method will make a request to the &quot;Hello&quot; action that we created before, and will pass the fields of the form &quot;form1&quot; as parameters. Which will be populated on the action, and serialized back as JSON. Using JSONParser the JSON string is parsed into a JSON object. It is definitely not type safe as GWT Remoting, but it works.</P>
+
+<H3><A name="GWTPluginTutorial-CreateMain.gwt.xml"></A>Create Main.gwt.xml</H3>
+<P>Nothing new on this file, just as reference:</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;"><B>Main.gwt.xml</B></DIV><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: xml; gutter: false"><![CDATA[
+&lt;module&gt;
+
+    &lt;!-- Inherit the core Web Toolkit stuff.                  --&gt;
+    &lt;inherits name='com.google.gwt.user.User'/&gt;
+    &lt;inherits name='com.google.gwt.json.JSON'/&gt;
+
+    &lt;!-- Specify the app entry point class.                   --&gt;
+    &lt;entry-point class='org.apache.struts.gwt.client.Main'/&gt;
+
+&lt;/module&gt;
+
+]]></SCRIPT>
+</DIV></DIV>
+
+<H3><A name="GWTPluginTutorial-Deploymentstructure"></A>Deployment structure</H3>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh">Folder</TH>
+<TH class="confluenceTh">Notes</TH>
+</TR>
+<TR>
+<TD class="confluenceTd">AppRoot</TD>
+<TD class="confluenceTd">The application deployment folder</TD>
+</TR>
+<TR>
+<TD class="confluenceTd">AppRoot/index.html</TD>
+<TD class="confluenceTd">Welcome Page</TD>
+</TR>
+<TR>
+<TD class="confluenceTd">AppRoot/org.apache.struts.gwt.Main</TD>
+<TD class="confluenceTd">Content generated by GWT (usually it gets generated into a folder named 'www')</TD>
+</TR>
+<TR>
+<TD class="confluenceTd">AppRoot/WEB-INF</TD>
+<TD class="confluenceTd">Regular webapp files and classes</TD>
+</TR>
+</TBODY></TABLE>
+
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

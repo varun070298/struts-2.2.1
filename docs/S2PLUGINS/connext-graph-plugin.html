@@ -1,0 +1,440 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('http://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Connext Graph Plugin</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="home.html" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="home.html" title="Home">Home</A>&nbsp;&gt;&nbsp;<A href="" title="Connext Graph Plugin">Connext Graph Plugin</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Connext Graph Plugin</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=60025">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=60025">Edit Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="http://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=60025">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=60025">Add Page</A>
+          &nbsp;
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=60025">
+            <IMG src="http://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="http://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=60025">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+                    Added by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=info@connext.co.za">Mark Ashworth</A>, last edited by <A href="http://cwiki.apache.org/confluence/users/viewuserprofile.action?username=info@connext.co.za">Mark Ashworth</A> on Apr 21, 2008
+                      &nbsp;(<A class="noprint" href="http://cwiki.apache.org/confluence/pages/diffpages.action?pageId=60025&originalId=83707">view change</A>)
+              
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Name </TH>
+<TD class="confluenceTd"> Connext Graph Plugin </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Publisher </TH>
+<TD class="confluenceTd"> Mark Ashworth </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> License </TH>
+<TD class="confluenceTd"> Open Source (ASL2) </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TD class="confluenceTd"> 0.7 </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Compatibility </TH>
+<TD class="confluenceTd"> Struts 2.0.2&#43; </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Homepage </TH>
+<TD class="confluenceTd"> <A href="https://connext-graphs.dev.java.net/" rel="nofollow">https://connext-graphs.dev.java.net</A> </TD>
+</TR>
+<TR>
+<TH class="confluenceTh"> Download </TH>
+<TD class="confluenceTd"> <A href="https://connext-graphs.dev.java.net/servlets/ProjectDocumentList" rel="nofollow">https://connext-graphs.dev.java.net/servlets/ProjectDocumentList</A> </TD>
+</TR>
+</TBODY></TABLE>
+
+<P><DIV id="rate60025">
+<DIV style="visibility:hidden; display:none;" id="rate60025.cookieName">rate-60025-70022</DIV>
+<TABLE class="confluenceTable">
+    <TBODY>
+        <TR>
+            <TD class="confluenceTd" height="25">Rating?</TD>
+            <TH class="confluenceTh" height="25" align="center" valign="middle">
+                <UL class="star-rating">
+                  <LI><A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=1',1)" title="Rate this 1 out of 5" class="one-star">1</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=2',2)" title="Rate this 2 out of 5" class="two-stars">2</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=3',3)" title="Rate this 3 out of 5" class="three-stars">3</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=4',4)" title="Rate this 4 out of 5" class="four-stars">4</A></LI>
+                  <LI><A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=5',5)" title="Rate this 5 out of 5" class="five-stars">5</A></LI>
+                </UL>
+            </TH>
+            <TD class="confluenceTd" height="25" align="center" valign="middle">
+                <A href="javascript:document.Rate.doAction('60025',document.Rate.rateURL+'&rateDir=dynamic&rateKey=60025&rateTitle=Rating&rating=0',false)" title="Display Results (132)"><IMG class="emoticon" src="http://cwiki.apache.org/confluence/download/resources/adaptavist.confluence.rate:rate/gfx/dynamic/chart.gif" alt="" border="0"></A>
+            </TD>
+        </TR>
+    </TBODY>
+</TABLE>
+ </DIV> </P>
+
+<H2><A name="ConnextGraphPlugin-Overview"></A>Overview</H2>
+
+<P>The Connext Graphs allows web applications to make use of the Open Flash Chart charts.</P>
+
+<H2><A name="ConnextGraphPlugin-Features"></A>Features</H2>
+
+<UL>
+	<LI>Struts 2 tag to embed the Open Flash Chart movie in the JSP page</LI>
+	<LI>Provide a controller model to generate the data file that it used to control the chart</LI>
+</UL>
+
+
+<H2><A name="ConnextGraphPlugin-Changes"></A>Changes</H2>
+
+<H3><A name="ConnextGraphPlugin-0.7Release"></A>0.7 Release</H3>
+
+<UL>
+	<LI>Fixed the chart title font and color problem</LI>
+	<LI>Removed the link to the Open Flash Chart website</LI>
+	<LI>Added Pie Chart support</LI>
+	<LI>Linked in the Open Flash Chart 1.9.7 release</LI>
+</UL>
+
+
+<H3><A name="ConnextGraphPlugin-0.6Release"></A>0.6 Release</H3>
+
+<UL>
+	<LI>Added support for the sketch bar chart thanks to Oleh Lozynskyy.</LI>
+	<LI>Linked in the Open Flash Chart 1.9.6 release</LI>
+</UL>
+
+
+<P>The following constructor is used to create the sketch bar chart </P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+new OFCBarSketchSeriesType(55, 6, "#d070ac", "#000000", "Test", 10)
+]]></SCRIPT>
+</DIV></DIV>
+
+<P>The following is complete snippet taken from the Connext-Graphs Demo web application that demonstrates the sketch bar chart</P>
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+DefaultOFCGraphDataModel model = new DefaultOFCGraphDataModel();
+model.setData(Arrays.asList(data01));
+model.setFormat(new DecimalFormat("###0.000"));
+model.setSeriesType(new OFCBarSketchSeriesType(55, 6, "#d070ac", "#000000", "Test", 10));
+controller.add(model);
+]]></SCRIPT>
+</DIV></DIV>
+
+<P><IMG src="connext-graph-plugin.data/bar_sketch.JPG" align="absmiddle" border="0"></P>
+
+<H3><A name="ConnextGraphPlugin-0.5Release"></A>0.5 Release</H3>
+
+<UL>
+	<LI>Added support for the 3D bar chart</LI>
+</UL>
+
+
+<H3><A name="ConnextGraphPlugin-0.4Release"></A>0.4 Release</H3>
+
+<UL>
+	<LI>Added support for bar and bar_fill charts</LI>
+</UL>
+
+
+<H2><A name="ConnextGraphPlugin-UpcomingFeatures"></A>Upcoming Features</H2>
+
+
+<H3><A name="ConnextGraphPlugin-0.5Release"></A>0.5 Release</H3>
+
+<UL>
+	<LI>Support for 3D bar charts</LI>
+	<LI>Support for pie charts</LI>
+</UL>
+
+
+<H3><A name="ConnextGraphPlugin-0.5%5CRelease"></A>0.5&#43; Release</H3>
+
+<UL>
+	<LI>FreeMarker tags</LI>
+	<LI>Velocity tags</LI>
+</UL>
+
+
+<H2><A name="ConnextGraphPlugin-Project"></A>Project</H2>
+
+<P>The project is accessible at <A href="https://connext-graphs.dev.java.net/" rel="nofollow">https://connext-graphs.dev.java.net/</A></P>
+
+<H2><A name="ConnextGraphPlugin-Example"></A>Example</H2>
+
+<OL>
+	<LI>Add the connext-graph.jar to the WEb_INF/lib folder</LI>
+</OL>
+
+
+<OL>
+	<LI>Include the taglib in your page</LI>
+</OL>
+
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;%@ taglib prefix="m" uri="/connext" %&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<OL>
+	<LI>Insert the graph tag into your JSP page. In the example the data.txt file contains the controller logic for the graph. If you would a Struts 2 action to provide the controller logic then place it's fully qualified URL in the url property. Example, /contractor/Graph.action if the Graph action provides the logic.</LI>
+</OL>
+
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;m:graph
+  id="graph"
+  width="800"
+  height="300"
+  align="middle"
+  bgcolor="#FFFFFF"
+  url="/Graph_example01.action"
+/&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<OL>
+	<LI>Code the Graph action class. Below is an example of the example01 method</LI>
+</OL>
+
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+OFCGraphController controller = new OFCGraphController();
+controller.getTitle().setText("Example 01");
+controller.getTitle().setSize(12);
+controller.getLabels().setLabels(Arrays.asList(labels));
+controller.getYLegend().setText("No. of tasks");
+controller.getYLegend().setColor("#8b0000");
+controller.getYLegend().setSize(12);
+controller.getXLegend().setText("Months");
+controller.getXLegend().setColor("#8b0000");
+controller.getXLegend().setSize(12);
+controller.getColor().getBgColor().setColor("#FFFFFF");
+controller.getColor().getXAxisColor().setColor("#e3e3e3");
+controller.getColor().getYAxisColor().setColor("#e3e3e3");
+controller.getColor().getXGridColor().setColor("#e3e3e3");
+controller.getColor().getYGridColor().setColor("#e3e3e3");
+
+DefaultOFCGraphDataModel model = new DefaultOFCGraphDataModel();
+model.setData(Arrays.asList(data01));
+model.setFormat(new DecimalFormat("###0.000"));
+model.setSeriesType(new OFCLineHollowSeriesType(3, "#8b0000", "Test", 10, 6));
+controller.add(model);
+
+model = new DefaultOFCGraphDataModel();
+model.setData(Arrays.asList(data02));
+model.setFormat(new DecimalFormat("###0.000"));
+model.setSeriesType(new OFCLineDotSeriesType(3, "#8b0000", "Test 2", 5, 6));
+controller.add(model);
+
+model = new DefaultOFCGraphDataModel();
+model.setData(Arrays.asList(data03));
+model.setFormat(new DecimalFormat("###0.000"));
+model.setSeriesType(new OFCLineSeriesType(2, "#8b0000", "Example", 4));
+controller.add(model);
+
+value = controller.render();
+
+return SUCCESS;
+]]></SCRIPT>
+</DIV></DIV>
+<OL>
+	<LI>Code the graph.jsp page to output the Graph.value property</LI>
+</OL>
+
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+&lt;%@ include file="include.jsp" %&gt;
+&lt;s:property value="value" escape="false" /&gt;
+]]></SCRIPT>
+</DIV></DIV>
+<OL>
+	<LI>Remember to put cache control off</LI>
+</OL>
+
+
+<DIV class="code panel" style="border-width: 1px;"><DIV class="codeContent panelContent">
+<SCRIPT type="syntaxhighlighter" class="toolbar: false; theme: default; brush: java; gutter: false"><![CDATA[
+response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+response.setHeader("Pragma","no-cache"); //HTTP 1.0
+response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+]]></SCRIPT>
+</DIV></DIV>    
+    
+    
+
+<DIV class="gallery">
+        <TABLE>
+
+                        <TR>
+                                    <TD class="gallery-image" style="width: 200px">
+                                    <A class="gallery-link" href="connext-graph-plugin.data/sample.PNG" rel="gallery-0" target="_gallery_slideshow" title="Sample web application with graph"><IMG border="0" src="connext-graph-plugin.data/sample.PNG.jpeg" width="200" height="142"></A>
+                                </TD>
+                                                <TD class="gallery-image" style="width: 200px">
+                                    <A class="gallery-link" href="connext-graph-plugin.data/sample01.JPG" rel="gallery-0" target="_gallery_slideshow" title="Screenshot showing 0.4 bar charts"><IMG border="0" src="connext-graph-plugin.data/sample01.JPG.jpeg" width="200" height="168"></A>
+                                </TD>
+                                                <TD class="gallery-image" style="width: 200px">
+                                    <A class="gallery-link" href="connext-graph-plugin.data/bar_sketch.JPG" rel="gallery-0" target="_gallery_slideshow" title=""><IMG border="0" src="connext-graph-plugin.data/bar_sketch.JPG.jpeg" width="200" height="191"></A>
+                                </TD>
+                                </TR>
+                    <TR>
+                                    <TD style="width: 200px">
+                    <DIV class="gallery-caption">Sample web application with graph</DIV>
+                </TD>
+                                                <TD style="width: 200px">
+                    <DIV class="gallery-caption">Screenshot showing 0.4 bar charts</DIV>
+                </TD>
+                                                <TD style="width: 200px">
+                    <DIV class="gallery-caption"></DIV>
+                </TD>
+                                </TR>
+             </TABLE>
+</DIV>
+
+
+<H2><A name="ConnextGraphPlugin-Resources"></A>Resources</H2>
+
+<UL>
+	<LI><A href="http://teethgrinder.co.uk/open-flash-chart/" rel="nofollow">http://teethgrinder.co.uk/open-flash-chart/</A></LI>
+	<LI><A href="http://www.connext.co.za/" rel="nofollow">http://www.connext.co.za</A></LI>
+</UL>
+
+
+<H2><A name="ConnextGraphPlugin-VersionHistory"></A>Version History</H2>
+
+<TABLE class="confluenceTable"><TBODY>
+<TR>
+<TH class="confluenceTh"> Version </TH>
+<TH class="confluenceTh"> Date </TH>
+<TH class="confluenceTh"> Author </TH>
+<TH class="confluenceTh"> Notes </TH>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.1 </TD>
+<TD class="confluenceTd"> Jun 20, 2007 </TD>
+<TD class="confluenceTd"> Mark Ashworth </TD>
+<TD class="confluenceTd"> Initial release </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.2 </TD>
+<TD class="confluenceTd"> Jun 23, 2007 </TD>
+<TD class="confluenceTd"> Mark Ashworth </TD>
+<TD class="confluenceTd"> Added the controller and line graph support </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.3 </TD>
+<TD class="confluenceTd"> Aug 18, 2007 </TD>
+<TD class="confluenceTd"> Mark Ashworth </TD>
+<TD class="confluenceTd"> Resolved the issue with the Tomcat tagSupport.xml file </TD>
+</TR>
+<TR>
+<TD class="confluenceTd"> 0.4 </TD>
+<TD class="confluenceTd"> Aug 20, 2007 </TD>
+<TD class="confluenceTd"> Mark Ashworth </TD>
+<TD class="confluenceTd"> Added support for bar and filled bar charts </TD>
+</TR>
+</TBODY></TABLE>
+        </DIV>
+
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 2.10.4 Build: 1520 Jul 24, 2009)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0.beta1)
+    </DIV>
+  </BODY>
+</HTML>

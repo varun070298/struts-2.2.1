@@ -1,0 +1,430 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <LINK type="text/css" rel="stylesheet" href="resources/space.css">
+    <STYLE type="text/css">
+      .footer {
+        background-image:      url('https://cwiki.apache.org/confluence/images/border/border_bottom.gif');
+        background-repeat:     repeat-x;
+        background-position:   left top;
+        padding-top:           4px;
+        color:                 #666;
+      }
+    </STYLE>
+    <SCRIPT type="text/javascript" language="javascript">
+      var hide = null;
+      var show = null;
+      var children = null;
+
+      function init() {
+        /* Search form initialization */
+        var form = document.forms['search'];
+        if (form != null) {
+          form.elements['domains'].value = location.hostname;
+          form.elements['sitesearch'].value = location.hostname;
+        }
+
+        /* Children initialization */
+        hide = document.getElementById('hide');
+        show = document.getElementById('show');
+        children = document.all != null ?
+                   document.all['children'] :
+                   document.getElementById('children');
+        if (children != null) {
+          children.style.display = 'none';
+          show.style.display = 'inline';
+          hide.style.display = 'none';
+        }
+      }
+
+      function showChildren() {
+        children.style.display = 'block';
+        show.style.display = 'none';
+        hide.style.display = 'inline';
+      }
+
+      function hideChildren() {
+        children.style.display = 'none';
+        show.style.display = 'inline';
+        hide.style.display = 'none';
+      }
+    </SCRIPT>
+    <TITLE>Home</TITLE>
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+  <BODY onload="init()">
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="100%">
+      <TR class="topBar">
+        <TD align="left" valign="middle" class="topBarDiv" align="left" nowrap="">
+          &nbsp;<A href="" title="Apache Struts 2 Plugin Registry">Apache Struts 2 Plugin Registry</A>&nbsp;&gt;&nbsp;<A href="" title="Home">Home</A>
+        </TD>
+        <TD align="right" valign="middle" nowrap="">
+          <FORM name="search" action="http://www.google.com/search" method="get">
+            <INPUT type="hidden" name="ie" value="UTF-8">
+            <INPUT type="hidden" name="oe" value="UTF-8">
+            <INPUT type="hidden" name="domains" value="">
+            <INPUT type="hidden" name="sitesearch" value="">
+            <INPUT type="text" name="q" maxlength="255" value="">        
+            <INPUT type="submit" name="btnG" value="Google Search">
+          </FORM>
+        </TD>
+      </TR> 
+    </TABLE>
+
+    <DIV id="PageContent">
+      <DIV class="pageheader" style="padding: 6px 0px 0px 0px;">
+        <!-- We'll enable this once we figure out how to access (and save) the logo resource -->
+        <!--img src="/wiki/images/confluence_logo.gif" style="float: left; margin: 4px 4px 4px 10px;" border="0"-->
+        <DIV style="margin: 0px 10px 0px 10px" class="smalltext">Apache Struts 2 Plugin Registry</DIV>
+        <DIV style="margin: 0px 10px 8px 10px" class="pagetitle">Home</DIV>
+
+        <DIV class="greynavbar" align="right" style="padding: 2px 10px; margin: 0px;">
+          <A href="https://cwiki.apache.org/confluence/pages/editpage.action?pageId=33266">
+            <IMG src="https://cwiki.apache.org/confluence/images/icons/notep_16.gif" height="16" width="16" border="0" align="absmiddle" title="Edit Page"></A>
+            <A href="https://cwiki.apache.org/confluence/pages/editpage.action?pageId=33266">Edit Page</A>
+          &nbsp;
+          <A href="https://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">
+            <IMG src="https://cwiki.apache.org/confluence/images/icons/browse_space.gif" height="16" width="16" border="0" align="absmiddle" title="Browse Space"></A>
+            <A href="https://cwiki.apache.org/confluence/pages/listpages.action?key=S2PLUGINS">Browse Space</A>
+          &nbsp;
+          <A href="https://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=33266">
+            <IMG src="https://cwiki.apache.org/confluence/images/icons/add_page_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add Page"></A>
+          <A href="https://cwiki.apache.org/confluence/pages/createpage.action?spaceKey=S2PLUGINS&fromPageId=33266">Add Page</A>
+          &nbsp;
+          <A href="https://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=33266">
+            <IMG src="https://cwiki.apache.org/confluence/images/icons/add_blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Add News"></A>
+          <A href="https://cwiki.apache.org/confluence/pages/createblogpost.action?spaceKey=S2PLUGINS&fromPageId=33266">Add News</A>
+        </DIV>
+      </DIV>
+      <DIV class="pagesubheading" style="margin: 0px 10px 0px 10px;">
+        #editReport()
+      </DIV>
+
+      <DIV class="pagecontent">
+        <DIV class="wiki-content">
+          <P><A href="../WW/home.html" title="Home">Apache Struts 2</A> provides a simple <A href="../WW/plugins.html" title="Plugins">plugin architecture</A> so that develpers can extend the framework just by adding a JAR to the application's classpath (in addition to whatever JARs may be required to fulfill the dependencies of the plugin itself). Since plugins are contained in a JAR, they are easy to share with others. Here, we list plugins available for Struts 2 and provides help on how to use them.
+<BR class="atl-forced-newline"></P>
+<DIV class="panelMacro"><TABLE class="noteMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="https://cwiki.apache.org/confluence/images/icons/emoticons/warning.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD>Contributed plugins may be of varying quality. If not bundled with the official Struts 2 distribution, a plugin cannot be guaranteed to be safe. You install plugins from this space <B>at your own risk</B>. We do not monitor or guarantee any code posted in this space. If you find dangerous or malicious code posted here, please <A href="http://struts.apache.org/mail.html" class="external-link" rel="nofollow">contact the Struts User mailing list</A> immediately.</TD></TR></TABLE></DIV>
+<P><BR class="atl-forced-newline">
+To follow plugin development, subscribe to these feeds with any RSS reader:</P>
+<UL>
+	<LI><A href="http://cwiki.apache.org/confluence/spaces/createrssfeed.action?types=blogpost&spaces=S2PLUGINS&statuses=created&maxResults=15&publicFeed=true&title=%5BApache%20Struts%202%20Plugins%5D%20News%20Feed" class="external-link" rel="nofollow">New announcements</A></LI>
+	<LI><A href="http://cwiki.apache.org/confluence/spaces/createrssfeed.action?types=page&spaces=S2PLUGINS&statuses=created&maxResults=15&publicFeed=true&title=%5BApache%20Struts%202%20Plugins%5D%20New%20Pages%20Feed" class="external-link" rel="nofollow">New plugin pages</A></LI>
+	<LI><A href="http://cwiki.apache.org/confluence/spaces/createrssfeed.action?types=page&spaces=S2PLUGINS&statuses=modified&maxResults=15&publicFeed=true&title=%5BApache%20Struts%202%20Plugins%5D%20Updated%20Pages%20Feed" class="external-link" rel="nofollow">Updated plugin pages</A></LI>
+	<LI><A href="http://cwiki.apache.org/confluence/spaces/createrssfeed.action?types=comment&spaces=S2PLUGINS&statuses=created&maxResults=15&publicFeed=true&title=%5BApache%20Struts%202%20Plugins%5D%20New%20Comments%20Feed" class="external-link" rel="nofollow">New comments</A>
+<BR class="atl-forced-newline">
+<BR class="atl-forced-newline">
+<DIV class="panel" style="background-color: #f5f7f1;border-color: #ccc;border-style: solid;border-width: 1px;"><DIV class="panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ccc;background-color: #d0d9bd;"><B>Announcements</B></DIV><DIV class="panelContent" style="background-color: #f5f7f1;">
+<TABLE width="99%" cellspacing="0" class="grid">
+    <TR>
+        <TH width="70%">Title</TH>
+        <TH>Author</TH>
+        <TH>Date Posted</TH>
+    </TR>
+
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="JFW 1.1.3">
+                     <A href="2010/06/09/jfw-113.html">JFW 1.1.3</A>
+        </TD>
+        <TD><A class="confluence-userlink username:takis.sp url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=takis.sp">Takis Spiropoulos</A></TD>
+        <TD>Jun 09, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2 jQuery plugin - Version 2.2.0">
+                     <A href="2010/06/08/struts2-jquery-plugin-version-220.html">Struts2 jQuery plugin - Version 2.2.0</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jogep url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A></TD>
+        <TD>Jun 08, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2-EJB3-Plugin 0.0.5 更新">
+                     <A href="2010/05/30/struts2-ejb3-plugin-005-.html">Struts2-EJB3-Plugin 0.0.5 更新</A>
+        </TD>
+        <TD><A class="confluence-userlink username:agrael url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael">Agrael Lee</A></TD>
+        <TD>May 30, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2-EJB3-Plugin 0.0.4 更新">
+                     <A href="2010/05/10/struts2-ejb3-plugin-004-.html">Struts2-EJB3-Plugin 0.0.4 更新</A>
+        </TD>
+        <TD><A class="confluence-userlink username:agrael url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael">Agrael Lee</A></TD>
+        <TD>May 10, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="jQuery plugin - Version 2.1.0">
+                     <A href="2010/04/19/jquery-plugin-version-210.html">jQuery plugin - Version 2.1.0</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jogep url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A></TD>
+        <TD>Apr 19, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2-EJB3-Plugin 0.0.3 更新">
+                     <A href="2010/03/30/struts2-ejb3-plugin-003-.html">Struts2-EJB3-Plugin 0.0.3 更新</A>
+        </TD>
+        <TD><A class="confluence-userlink username:agrael url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael">Agrael Lee</A></TD>
+        <TD>Mar 30, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2-EJB3-Plugin 0.0.2 更新">
+                     <A href="2010/03/23/struts2-ejb3-plugin-002-.html">Struts2-EJB3-Plugin 0.0.2 更新</A>
+        </TD>
+        <TD><A class="confluence-userlink username:agrael url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael">Agrael Lee</A></TD>
+        <TD>Mar 23, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="jQuery plugin - Version 2.0.0">
+                     <A href="2010/03/22/jquery-plugin-version-200.html">jQuery plugin - Version 2.0.0</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jogep url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A></TD>
+        <TD>Mar 22, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Struts2-EJB3-Plugin 0.0.1 发布">
+                     <A href="2010/03/11/struts2-ejb3-plugin-001-.html">Struts2-EJB3-Plugin 0.0.1 发布</A>
+        </TD>
+        <TD><A class="confluence-userlink username:agrael url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=agrael">Agrael Lee</A></TD>
+        <TD>Mar 11, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Full Hibernate Plugin 2.2 GA Released">
+                     <A href="2010/03/08/full-hibernate-plugin-22-ga-released.html">Full Hibernate Plugin 2.2 GA Released</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jyoshiriro url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jyoshiriro">Jos&eacute; Yoshiriro</A></TD>
+        <TD>Mar 08, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="JsCalendar Plugin - now LGPL">
+                     <A href="2010/02/04/jscalendar-plugin-now-lgpl.html">JsCalendar Plugin - now LGPL</A>
+        </TD>
+        <TD><A class="confluence-userlink username:philipp.leusmann@rwth-aachen.de url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=philipp.leusmann@rwth-aachen.de">Philipp Leusmann</A></TD>
+        <TD>Feb 04, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="JSCalendar Plugin - New Version 0.6">
+                     <A href="2010/01/30/jscalendar-plugin-new-version-06.html">JSCalendar Plugin - New Version 0.6</A>
+        </TD>
+        <TD><A class="confluence-userlink username:philipp.leusmann@rwth-aachen.de url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=philipp.leusmann@rwth-aachen.de">Philipp Leusmann</A></TD>
+        <TD>Jan 30, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="jQuery plugin - Version 1.8.2">
+                     <A href="2010/01/25/jquery-plugin-version-182.html">jQuery plugin - Version 1.8.2</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jogep url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jogep">Johannes Geppert</A></TD>
+        <TD>Jan 25, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Full Hibernate Plugin 2.1.3 GA Released">
+                     <A href="2010/01/20/full-hibernate-plugin-213-ga-released.html">Full Hibernate Plugin 2.1.3 GA Released</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jyoshiriro url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jyoshiriro">Jos&eacute; Yoshiriro</A></TD>
+        <TD>Jan 20, 2010</TD>
+    </TR>
+    <TR>
+        <TD>             <IMG src="https://cwiki.apache.org/confluence/s/1810/9/_/images/icons/blogentry_16.gif" height="16" width="16" border="0" align="absmiddle" title="Full Hibernate Plugin 2.1.1 GA Released">
+                     <A href="2009/12/15/full-hibernate-plugin-211-ga-released.html">Full Hibernate Plugin 2.1.1 GA Released</A>
+        </TD>
+        <TD><A class="confluence-userlink username:jyoshiriro url fn" href="https://cwiki.apache.org/confluence/users/viewuserprofile.action?username=jyoshiriro">Jos&eacute; Yoshiriro</A></TD>
+        <TD>Dec 15, 2009</TD>
+    </TR>
+</TABLE>
+</DIV></DIV>
+<P><BR class="atl-forced-newline">
+<IMG class="emoticon" src="https://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" height="16" width="16" align="absmiddle" alt="" border="0"> To announce a plugin that is hosted elsewhere, register with this wiki, and create a new &quot;News&quot; announcement.  
+<BR class="atl-forced-newline">
+<BR class="atl-forced-newline"></P></LI>
+</UL>
+
+
+<DIV class="panel" style="background-color: #cee7ff;border-color: #ccc;border-style: solid;border-width: 1px;"><DIV class="panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ccc;background-color: #6699cc;"><B>Plugins</B></DIV><DIV class="panelContent" style="background-color: #cee7ff;">
+<UL><LI><A href="advanced-fileupload-plugin.html" title="Advanced Fileupload Plugin">Advanced Fileupload Plugin</A></LI><LI><A href="another-json-result-typestruts2jsonresult.html" title="Another Json result type(struts2jsonresult)">Another Json result type(struts2jsonresult)</A></LI><LI><A href="breadcrumbs-plugin.html" title="Breadcrumbs Plugin">Breadcrumbs Plugin</A> &mdash; <SPAN class="smalltext">is designed to capture bread crumbs.  It can be configured many ways</SPAN></LI><LI><A href="codebehind-plugin.html" title="Codebehind Plugin">Codebehind Plugin</A> &mdash; <SPAN class="smalltext">reduces mundane configuration by adding &quot;Page Controller&quot; conventions</SPAN></LI><LI><A href="config-browser-plugin.html" title="Config Browser Plugin">Config Browser Plugin</A> &mdash; <SPAN class="smalltext">a simple tool to help view your Struts configuration at runtime</SPAN></LI><LI><A href="connext-graph-plugin.html" title="Connext Graph Plugin">Connext Graph Plugin</A> &mdash; <SPAN class="smalltext">allows web applications to make use of the Open Flash Chart charts</SPAN></LI><LI><A href="convention-plugin.html" title="Convention Plugin">Convention Plugin</A> &mdash; <SPAN class="smalltext">a code by convention and component plugin similar to the Codebehind and Zero-config plugins</SPAN></LI><LI><A href="datavision-plugin.html" title="DataVision Plugin">DataVision Plugin</A> &mdash; <SPAN class="smalltext">provides support for DataVision, a popular open-source reporting package</SPAN></LI><LI><A href="dwr-plugin.html" title="DWR Plugin">DWR Plugin</A> &mdash; <SPAN class="smalltext">provides integration with the Ajax framework <A href="http://getahead.org/dwr" class="external-link" rel="nofollow">Direct Web Remoting</A></SPAN></LI><LI><A href="ejb3-jboss-plugin.html" title="EJB3 JBoss plugin">EJB3 JBoss plugin</A> &mdash; <SPAN class="smalltext">allows EJB3 session beans to be injected into Struts 2 actions</SPAN></LI><LI><A href="ejb3-plugin.html" title="EJB3 plugin">EJB3 plugin</A> &mdash; <SPAN class="smalltext">allows EJB3 session beans to be injected into Struts 2 actions</SPAN></LI><LI><A href="embedded-jsp-plugin.html" title="Embedded JSP Plugin">Embedded JSP Plugin</A> &mdash; <SPAN class="smalltext">allows you to use JSPs from the classpath (from jar files)</SPAN></LI><LI><A href="extratags-plugin.html" title="ExtraTags Plugin">ExtraTags Plugin</A> &mdash; <SPAN class="smalltext">provides a set of additional tags that complement the core UI tags</SPAN></LI><LI><A href="full-hibernate-plugin.html" title="Full Hibernate Plugin">Full Hibernate Plugin</A> &mdash; <SPAN class="smalltext">provides Hibernate Validator integration, Hibernate Core Sessions and Transactions injection capabilities and a Configuration Management Web Tool</SPAN></LI><LI><A href="groovy-plugin.html" title="Groovy Plugin">Groovy Plugin</A> &mdash; <SPAN class="smalltext">provides support for Actions (and Interceptors) written in the Groovy language</SPAN></LI><LI><A href="guice-plugin.html" title="Guice Plugin">Guice Plugin</A> &mdash; <SPAN class="smalltext">allows Actions, Interceptors, and Results to be injected by Guice</SPAN></LI><LI><A href="gwt-plugin.html" title="GWT Plugin">GWT Plugin</A> &mdash; <SPAN class="smalltext">can be used to call methods on Struts actions using Google Web Toolkit (GWT)</SPAN></LI><LI><A href="hdiv-plugin.html" title="HDIV Plugin">HDIV Plugin</A> &mdash; <SPAN class="smalltext">integrates <A href="http://www.hdiv.org/" class="external-link" rel="nofollow">HDIV (HTTP Data Integrity Validator)</A> with Struts 2 adding Security functionalities</SPAN></LI><LI><A href="hibernate-session-plugin.html" title="Hibernate Session Plugin">Hibernate Session Plugin</A> &mdash; <SPAN class="smalltext">There is the best practice the use of design pattern &quot;open session in view&quot; for WEB applications with Hibernate.</SPAN></LI><LI><A href="hibernate-session-plugin-15-released.html" title="Hibernate Session Plugin 1.5 released">Hibernate Session Plugin 1.5 released</A></LI><LI><A href="image-plugin.html" title="Image Plugin">Image Plugin</A> &mdash; <SPAN class="smalltext">collection of various plugins for image handling (thumbnails, remote storage, validator)</SPAN></LI><LI><A href="integration-with-jqgrid.html" title="Integration with JQGRID">Integration with JQGRID</A></LI><LI><A href="jasperreports-plugin.html" title="JasperReports Plugin">JasperReports Plugin</A> &mdash; <SPAN class="smalltext">enables Actions to return reports through JasperReports</SPAN></LI><LI><A href="java-templates-plugin.html" title="Java Templates Plugin">Java Templates Plugin</A></LI><LI><A href="jfreechart-plugin.html" title="JFreeChart Plugin">JFreeChart Plugin</A> &mdash; <SPAN class="smalltext">allows Actions to easily return generated charts and graphs</SPAN></LI><LI><A href="jfw-plugin-update.html" title="JFW plugin update">JFW plugin update</A></LI><LI><A href="jquery-plugin-easy-ajax-and-widget-integration.html" title="jQuery plugin - Easy AJAX and Widget Integration">jQuery plugin - Easy AJAX and Widget Integration</A></LI><LI><A href="jruby-plugin.html" title="JRuby Plugin">JRuby Plugin</A> &mdash; <SPAN class="smalltext">provides support for Actions written in JRuby</SPAN></LI><LI><A href="jscalendar-plugin.html" title="JSCalendar Plugin">JSCalendar Plugin</A> &mdash; <SPAN class="smalltext">a backport of the Webwork 2.2.6 <A href="http://www.dynarch.com/projects/calendar/old/" class="external-link" rel="nofollow">JSCalendar</A> tag</SPAN></LI><LI><A href="jsf-plugin.html" title="JSF Plugin">JSF Plugin</A> &mdash; <SPAN class="smalltext">provides support for JavaServer Faces components with no additional configuration</SPAN></LI><LI><A href="json-plugin.html" title="JSON Plugin">JSON Plugin</A> &mdash; <SPAN class="smalltext">provides a &quot;json&quot; result type that serializes actions into JSON</SPAN></LI><LI><A href="junit-plugin.html" title="JUnit Plugin">JUnit Plugin</A> &mdash; <SPAN class="smalltext">provides integration with the popular <A href="http://junit.org/" class="external-link" rel="nofollow">JUnit</A> unit testing framework</SPAN></LI><LI><A href="lightboxjs-plugin.html" title="LightBoxJS Plugin">LightBoxJS Plugin</A> &mdash; <SPAN class="smalltext">makes it easier to use the popular <A href="http://www.huddletogether.com/projects/lightbox2/" class="external-link" rel="nofollow">LightBoxJS</A> script</SPAN></LI><LI><A href="osgi-plugin.html" title="OSGi Plugin">OSGi Plugin</A> &mdash; <SPAN class="smalltext">provides support for starting an instance of Apache Felix inside a web application, and scanning installed bundles for Struts configuration</SPAN></LI><LI><A href="oval-plugin.html" title="OVal Plugin">OVal Plugin</A></LI><LI><A href="pell-multipart-plugin.html" title="Pell Multipart Plugin">Pell Multipart Plugin</A> &mdash; <SPAN class="smalltext">instructs Struts to use <A href="http://freshmeat.net/projects/multipartrequest" class="external-link" rel="nofollow">Jason Pell's multipart parser</A> to process file uploads</SPAN></LI><LI><A href="plexus-plugin.html" title="Plexus Plugin">Plexus Plugin</A> &mdash; <SPAN class="smalltext">enables Struts Actions, Interceptors, and Results to be created and injected by <A href="http://plexus.codehaus.org/" class="external-link" rel="nofollow">Plexus</A></SPAN></LI><LI><A href="portlet-plugin.html" title="Portlet Plugin">Portlet Plugin</A> &mdash; <SPAN class="smalltext">is used for developing JSR168 portlets using Struts 2</SPAN></LI><LI><A href="rest-plugin.html" title="REST Plugin">REST Plugin</A> &mdash; <SPAN class="smalltext">provides tools to build RESTful applications</SPAN></LI><LI><A href="rome-rss-atom-plugin.html" title="Rome RSS-Atom Plugin">Rome RSS-Atom Plugin</A> &mdash; <SPAN class="smalltext">allows easy outputting of Rome SyndFeed objects (RSS, Atom)</SPAN></LI><LI><A href="scope-plugin.html" title="Scope Plugin">Scope Plugin</A> &mdash; <SPAN class="smalltext">implements JBoss Seam-style scoped bijection and conversation management</SPAN></LI><LI><A href="sitegraph-plugin.html" title="SiteGraph Plugin">SiteGraph Plugin</A> &mdash; <SPAN class="smalltext">generates graphical diagrams representing the flow of your web application</SPAN></LI><LI><A href="sitemesh-plugin.html" title="Sitemesh Plugin">Sitemesh Plugin</A> &mdash; <SPAN class="smalltext">allows Sitemesh templates to access Struts information</SPAN></LI><LI><A href="smarturls-plugin.html" title="SmartURLs plugin">SmartURLs plugin</A></LI><LI><A href="spring-mvc-plugin.html" title="Spring MVC Plugin">Spring MVC Plugin</A> &mdash; <SPAN class="smalltext">allows Spring MVC controllers and interceptors to be executed in Struts 2</SPAN></LI><LI><A href="spring-plugin.html" title="Spring Plugin">Spring Plugin</A> &mdash; <SPAN class="smalltext">allows Actions, Interceptors, and Results to be created and/or autowired by Spring</SPAN></LI><LI><A href="spring-webflow-plugin.html" title="Spring Webflow Plugin">Spring Webflow Plugin</A> &mdash; <SPAN class="smalltext">integrates <A href="http://www.springframework.org/webflow" class="external-link" rel="nofollow">Spring Webflow</A> (SWF) with Struts 2</SPAN></LI><LI><A href="struts2-ejb3-plugin.html" title="Struts2-EJB3-Plugin">Struts2-EJB3-Plugin</A> &mdash; <SPAN class="smalltext">该plugin提供struts的Action及Interceptor对EJB组件及Resource的无侵入式依赖注入(DI)。实现Struts2与EJB3的整合。</SPAN></LI><LI><A href="struts2-jcr-plugin.html" title="Struts2 JCR Plugin">Struts2 JCR Plugin</A></LI><LI><A href="struts-1-plugin.html" title="Struts 1 Plugin">Struts 1 Plugin</A> &mdash; <SPAN class="smalltext">allows you to use existing Struts 1 Actions and ActionForms in Struts 2 applications</SPAN></LI><LI><A href="testng-plugin.html" title="TestNG Plugin">TestNG Plugin</A> &mdash; <SPAN class="smalltext">provides integration with the popular <A href="http://testng.org/" class="external-link" rel="nofollow">TestNG</A> unit testing framework</SPAN></LI><LI><A href="tiles-plugin.html" title="Tiles Plugin">Tiles Plugin</A> &mdash; <SPAN class="smalltext">allows actions to return Tiles pages</SPAN></LI><LI><A href="webwork2-plugin.html" title="WebWork2 Plugin">WebWork2 Plugin</A> &mdash; <SPAN class="smalltext">allows webwork actions and configuration to be used in Struts 2</SPAN></LI><LI><A href="yui-plugin.html" title="YUI Plugin">YUI Plugin</A> &mdash; <SPAN class="smalltext">provides tags based on the Yahoo&#33; User Interface Library (YUI)</SPAN></LI></UL>
+</DIV></DIV>
+<P><BR class="atl-forced-newline"></P>
+<DIV class="panelMacro"><TABLE class="warningMacro"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="https://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD>Have a bug report or feature request? - The registry lists plugins made available by various authors. To file a report regarding a third-party plugin, visit the homepage for the plugin in question. (Most of the external plugins are hosted by Google Code, and you can file an Issue there.) If the report regards a plugin bundled with the Apache Struts distribution, then (and only then) use the Struts <A href="https://issues.apache.org/struts/secure/Dashboard.jspa" class="external-link" rel="nofollow">issue tracker</A>.</TD></TR></TABLE></DIV>
+<P><BR class="atl-forced-newline"></P>
+
+
+
+        </DIV>
+
+                  <DIV class="tabletitle">
+            Children
+            <SPAN class="smalltext" id="show" style="display: inline;">
+              <A href="javascript:showChildren()">Show Children</A></SPAN>
+            <SPAN class="smalltext" id="hide" style="display: none;">
+              <A href="javascript:hideChildren()">Hide Children</A></SPAN>
+          </DIV>
+          <DIV class="greybox" id="children" style="display: none;">
+                                      <A href="jsf-plugin.html" title="JSF Plugin">JSF Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="spring-plugin.html" title="Spring Plugin">Spring Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="codebehind-plugin.html" title="Codebehind Plugin">Codebehind Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="config-browser-plugin.html" title="Config Browser Plugin">Config Browser Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jasperreports-plugin.html" title="JasperReports Plugin">JasperReports Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="sitegraph-plugin.html" title="SiteGraph Plugin">SiteGraph Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="sitemesh-plugin.html" title="Sitemesh Plugin">Sitemesh Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="tiles-plugin.html" title="Tiles Plugin">Tiles Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="struts-1-plugin.html" title="Struts 1 Plugin">Struts 1 Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="pell-multipart-plugin.html" title="Pell Multipart Plugin">Pell Multipart Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="plexus-plugin.html" title="Plexus Plugin">Plexus Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jfreechart-plugin.html" title="JFreeChart Plugin">JFreeChart Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="scope-plugin.html" title="Scope Plugin">Scope Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="spring-webflow-plugin.html" title="Spring Webflow Plugin">Spring Webflow Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="gwt-plugin.html" title="GWT Plugin">GWT Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="json-plugin.html" title="JSON Plugin">JSON Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="spring-mvc-plugin.html" title="Spring MVC Plugin">Spring MVC Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="rome-rss-atom-plugin.html" title="Rome RSS-Atom Plugin">Rome RSS-Atom Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="groovy-plugin.html" title="Groovy Plugin">Groovy Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="image-plugin.html" title="Image Plugin">Image Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="smarturls-plugin.html" title="SmartURLs plugin">SmartURLs plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="yui-plugin.html" title="YUI Plugin">YUI Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="connext-graph-plugin.html" title="Connext Graph Plugin">Connext Graph Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="hdiv-plugin.html" title="HDIV Plugin">HDIV Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="osgi-plugin.html" title="OSGi Plugin">OSGi Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jscalendar-plugin.html" title="JSCalendar Plugin">JSCalendar Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="lightboxjs-plugin.html" title="LightBoxJS Plugin">LightBoxJS Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="webwork2-plugin.html" title="WebWork2 Plugin">WebWork2 Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="extratags-plugin.html" title="ExtraTags Plugin">ExtraTags Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="rest-plugin.html" title="REST Plugin">REST Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="breadcrumbs-plugin.html" title="Breadcrumbs Plugin">Breadcrumbs Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="guice-plugin.html" title="Guice Plugin">Guice Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="ejb3-plugin.html" title="EJB3 plugin">EJB3 plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="datavision-plugin.html" title="DataVision Plugin">DataVision Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jruby-plugin.html" title="JRuby Plugin">JRuby Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="convention-plugin.html" title="Convention Plugin">Convention Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="portlet-plugin.html" title="Portlet Plugin">Portlet Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="junit-plugin.html" title="JUnit Plugin">JUnit Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="testng-plugin.html" title="TestNG Plugin">TestNG Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="dwr-plugin.html" title="DWR Plugin">DWR Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="ejb3-jboss-plugin.html" title="EJB3 JBoss plugin">EJB3 JBoss plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="hibernate-session-plugin.html" title="Hibernate Session Plugin">Hibernate Session Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="hibernate-session-plugin-15-released.html" title="Hibernate Session Plugin 1.5 released">Hibernate Session Plugin 1.5 released</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="java-templates-plugin.html" title="Java Templates Plugin">Java Templates Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="another-json-result-typestruts2jsonresult.html" title="Another Json result type(struts2jsonresult)">Another Json result type(struts2jsonresult)</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jfw-plugin-update.html" title="JFW plugin update">JFW plugin update</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="oval-plugin.html" title="OVal Plugin">OVal Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="full-hibernate-plugin.html" title="Full Hibernate Plugin">Full Hibernate Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="jquery-plugin-easy-ajax-and-widget-integration.html" title="jQuery plugin - Easy AJAX and Widget Integration">jQuery plugin - Easy AJAX and Widget Integration</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="advanced-fileupload-plugin.html" title="Advanced Fileupload Plugin">Advanced Fileupload Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="embedded-jsp-plugin.html" title="Embedded JSP Plugin">Embedded JSP Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="integration-with-jqgrid.html" title="Integration with JQGRID">Integration with JQGRID</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="struts2-ejb3-plugin.html" title="Struts2-EJB3-Plugin">Struts2-EJB3-Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                          <A href="struts2-jcr-plugin.html" title="Struts2 JCR Plugin">Struts2 JCR Plugin</A>
+              <SPAN class="smalltext">(Apache Struts 2 Plugin Registry)</SPAN>
+              <BR>
+                      </DIV>
+        
+      </DIV>
+    </DIV>
+    <DIV class="footer">
+      Generated by
+      <A href="http://www.atlassian.com/confluence/">Atlassian Confluence</A> (Version: 3.2 Build: 1810 Mar 16, 2010)
+      <A href="http://could.it/autoexport/">Auto Export Plugin</A> (Version: 1.0.0-dkulp)
+    </DIV>
+  </BODY>
+</HTML>
